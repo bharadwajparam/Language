@@ -82,5 +82,257 @@
       {"script": "थंड", "transliteration": "thand"},
       {"script": "आहे", "transliteration": "aahe"}
     ]
+  },
+  {
+    "english": "He likes to eat apples",
+    "marathi": [
+      {"script": "त्याला", "transliteration": "tyaalaa"},
+      {"script": "सफरचंद", "transliteration": "safarchand"},
+      {"script": "खायला", "transliteration": "khaaylaa"},
+      {"script": "आवडतात", "transliteration": "aavadtaat"}
+    ]
+  },
+  {
+    "english": "Where is the hospital?",
+    "marathi": [
+      {"script": "रुग्णालय", "transliteration": "rugnaalay"},
+      {"script": "कुठे", "transliteration": "kuthe"},
+      {"script": "आहे", "transliteration": "aahe"}
+    ]
+  },
+  {
+    "english": "I need to buy tickets",
+    "marathi": [
+      {"script": "मला", "transliteration": "malaa"},
+      {"script": "तिकीट", "transliteration": "tikeet"},
+      {"script": "विकत", "transliteration": "vikat"},
+      {"script": "घ्यायचे", "transliteration": "ghyaayche"},
+      {"script": "आहे", "transliteration": "aahe"}
+    ]
+  },
+  {
+    "english": "The sky is blue today",
+    "marathi": [
+      {"script": "आज", "transliteration": "aaj"},
+      {"script": "आकाश", "transliteration": "aakaash"},
+      {"script": "निळे", "transliteration": "niLe"},
+      {"script": "आहे", "transliteration": "aahe"}
+    ]
+  },
+  {
+    "english": "Please come inside",
+    "marathi": [
+      {"script": "कृपया", "transliteration": "krupayaa"},
+      {"script": "आत", "transliteration": "aat"},
+      {"script": "ये", "transliteration": "ye"}
+    ]
+  },
+  {
+    "english": "My house is far",
+    "marathi": [
+      {"script": "माझे", "transliteration": "maaze"},
+      {"script": "घर", "transliteration": "ghar"},
+      {"script": "दूर", "transliteration": "door"},
+      {"script": "आहे", "transliteration": "aahe"}
+    ]
+  },
+  {
+    "english": "She is my friend",
+    "marathi": [
+      {"script": "ती", "transliteration": "tee"},
+      {"script": "माझी", "transliteration": "maazhee"},
+      {"script": "मैत्रीण", "transliteration": "maitreen"},
+      {"script": "आहे", "transliteration": "aahe"}
+    ]
+  },
+  {
+    "english": "What is your name?",
+    "marathi": [
+      {"script": "तुझे", "transliteration": "tujhe"},
+      {"script": "नाव", "transliteration": "naav"},
+      {"script": "काय", "transliteration": "kaay"},
+      {"script": "आहे", "transliteration": "aahe"}
+    ]
+  },
+  {
+    "english": "I do not know",
+    "marathi": [
+      {"script": "मला", "transliteration": "malaa"},
+      {"script": "माहित", "transliteration": "maahit"},
+      {"script": "नाही", "transliteration": "naahi"}
+    ]
+  },
+  {
+    "english": "They are eating rice",
+    "marathi": [
+      {"script": "ते", "transliteration": "te"},
+      {"script": "भात", "transliteration": "bhaat"},
+      {"script": "खात", "transliteration": "khaat"},
+      {"script": "आहेत", "transliteration": "aahet"}
+    ]
+  },
+  {
+    "english": "I love you",
+    "marathi": [
+      {"script": "मी", "transliteration": "mee"},
+      {"script": "तुझ्यावर", "transliteration": "tujhyaavar"},
+      {"script": "प्रेम", "transliteration": "prem"},
+      {"script": "करतो", "transliteration": "karto"}
+    ]
+  },
+  {
+    "english": "The weather is very hot",
+    "marathi": [
+      {"script": "हवामान", "transliteration": "havaamaan"},
+      {"script": "खूप", "transliteration": "khoop"},
+      {"script": "गरम", "transliteration": "garam"},
+      {"script": "आहे", "transliteration": "aahe"}
+    ]
+  },
+  {
+    "english": "Look at the mountains",
+    "marathi": [
+      {"script": "पर्वताकडे", "transliteration": "parvataakade"},
+      {"script": "बघ", "transliteration": "bagh"}
+    ]
+  },
+  {
+    "english": "I want to sleep",
+    "marathi": [
+      {"script": "मला", "transliteration": "malaa"},
+      {"script": "झोपायचे", "transliteration": "zhopaayche"},
+      {"script": "आहे", "transliteration": "aahe"}
+    ]
+  },
+  {
+    "english": "Turn to the right",
+    "marathi": [
+      {"script": "उजवीकडे", "transliteration": "ujveekade"},
+      {"script": "वळा", "transliteration": "vaLaa"}
+    ]
+  },
+  {
+    "english": "I drink milk every morning",
+    "marathi": [
+      {"script": "मी", "transliteration": "mee"},
+      {"script": "दररोज", "transliteration": "darroj"},
+      {"script": "सकाळी", "transliteration": "sakaaLee"},
+      {"script": "दूध", "transliteration": "doodh"},
+      {"script": "पितो", "transliteration": "pito"}
+    ]
+  },
+  {
+    "english": "My office is near",
+    "marathi": [
+      {"script": "माझे", "transliteration": "maaze"},
+      {"script": "कार्यालय", "transliteration": "kaaryaalay"},
+      {"script": "जवळ", "transliteration": "javaL"},
+      {"script": "आहे", "transliteration": "aahe"}
+    ]
+  },
+  {
+    "english": "The price is high",
+    "marathi": [
+      {"script": "किंमत", "transliteration": "kimmat"},
+      {"script": "जास्त", "transliteration": "jaast"},
+      {"script": "आहे", "transliteration": "aahe"}
+    ]
+  },
+  {
+    "english": "See you tomorrow",
+    "marathi": [
+      {"script": "उद्या", "transliteration": "udyaa"},
+      {"script": "भेटूया", "transliteration": "bhetooyaa"}
+    ]
+  },
+  {
+    "english": "I am a student",
+    "marathi": [
+      {"script": "मी", "transliteration": "mee"},
+      {"script": "विद्यार्थी", "transliteration": "vidyaarthee"},
+      {"script": "आहे", "transliteration": "aahe"}
+    ]
+  },
+  {
+    "english": "Close the window",
+    "marathi": [
+      {"script": "खिडकी", "transliteration": "khidkee"},
+      {"script": "बंद", "transliteration": "band"},
+      {"script": "करा", "transliteration": "karaa"}
+    ]
+  },
+  {
+    "english": "Open the door",
+    "marathi": [
+      {"script": "दरवाजा", "transliteration": "darvaajaa"},
+      {"script": "उघडा", "transliteration": "ughadaa"}
+    ]
+  },
+  {
+    "english": "It is raining now",
+    "marathi": [
+      {"script": "आता", "transliteration": "aataa"},
+      {"script": "पाऊस", "transliteration": "paaoos"},
+      {"script": "पडत", "transliteration": "padat"},
+      {"script": "आहे", "transliteration": "aahe"}
+    ]
+  },
+  {
+    "english": "I will go there",
+    "marathi": [
+      {"script": "मी", "transliteration": "mee"},
+      {"script": "तिथे", "transliteration": "tithe"},
+      {"script": "जाईन", "transliteration": "jaaeen"}
+    ]
+  },
+  {
+    "english": "I heard a song",
+    "marathi": [
+      {"script": "मी", "transliteration": "mee"},
+      {"script": "एक", "transliteration": "ek"},
+      {"script": "गाणे", "transliteration": "gaane"},
+      {"script": "ऐकले", "transliteration": "aikale"}
+    ]
+  },
+  {
+    "english": "The shirt is white",
+    "marathi": [
+      {"script": "शर्ट", "transliteration": "shart"},
+      {"script": "पांढरा", "transliteration": "paandhraa"},
+      {"script": "आहे", "transliteration": "aahe"}
+    ]
+  },
+  {
+    "english": "We played together",
+    "marathi": [
+      {"script": "आम्ही", "transliteration": "aamhee"},
+      {"script": "एकत्र", "transliteration": "ekatra"},
+      {"script": "खेळलो", "transliteration": "kheLalo"}
+    ]
+  },
+  {
+    "english": "Please sit on the chair",
+    "marathi": [
+      {"script": "कृपया", "transliteration": "krupayaa"},
+      {"script": "खुर्चीवर", "transliteration": "khurcheevar"},
+      {"script": "बसा", "transliteration": "basaa"}
+    ]
+  },
+  {
+    "english": "This is a new car",
+    "marathi": [
+      {"script": "ही", "transliteration": "hee"},
+      {"script": "नवीन", "transliteration": "naveen"},
+      {"script": "गाडी", "transliteration": "gaadee"},
+      {"script": "आहे", "transliteration": "aahe"}
+    ]
+  },
+  {
+    "english": "Wash your hands",
+    "marathi": [
+      {"script": "तुमचे", "transliteration": "tumche"},
+      {"script": "हात", "transliteration": "haat"},
+      {"script": "धुवा", "transliteration": "dhuvaa"}
+    ]
   }
 ]

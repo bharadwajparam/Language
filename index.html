@@ -59,6 +59,17 @@
                            class="w-full md:w-64 px-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary shadow-sm transition">
                 </div>
             </div>
+
+            <!-- Category Filters -->
+            <div class="mb-8 flex flex-wrap gap-2" id="category-filters">
+                <button class="cat-btn active px-4 py-1.5 rounded-full text-sm font-medium bg-primary text-white shadow-sm transition" data-cat="All">All</button>
+                <button class="cat-btn px-4 py-1.5 rounded-full text-sm font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition" data-cat="Noun">Noun</button>
+                <button class="cat-btn px-4 py-1.5 rounded-full text-sm font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition" data-cat="Verb">Verb</button>
+                <button class="cat-btn px-4 py-1.5 rounded-full text-sm font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition" data-cat="Adjective">Adjective</button>
+                <button class="cat-btn px-4 py-1.5 rounded-full text-sm font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition" data-cat="Adverb">Adverb</button>
+                <button class="cat-btn px-4 py-1.5 rounded-full text-sm font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition" data-cat="Pronoun">Pronoun</button>
+                <button class="cat-btn px-4 py-1.5 rounded-full text-sm font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition" data-cat="Misc">Misc</button>
+            </div>
             
             <div id="dictionary-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Dictionary items will be injected here -->
