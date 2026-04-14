@@ -1,0 +1,68 @@
+/* Custom Styles supplementing Tailwind */
+
+/* Smooth fade in animation for views */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.view-section {
+    display: none;
+    animation: fadeIn 0.4s ease-out forwards;
+}
+
+.view-section.active-view {
+    display: block;
+}
+
+/* Dictionary Card Hover Effects */
+.dict-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dict-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+/* Interactive word options in game */
+.word-option {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.word-option:active {
+    transform: scale(0.95);
+}
+
+.word-option.selected {
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none; /* Can't click again if selected */
+}
+
+/* Selected word in the sentence area */
+.selected-word {
+    animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    cursor: pointer;
+}
+.selected-word:hover {
+    background-color: #fca5a5; /* soft red hover to indicate removal */
+    border-color: #ef4444;
+    color: #991b1b;
+}
+
+@keyframes popIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Shake animation for wrong answer */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.shake {
+    animation: shake 0.5s ease-in-out;
+}

@@ -1,0 +1,86 @@
+[
+  {
+    "english": "I drink water",
+    "marathi": [
+      {"script": "मी", "transliteration": "mee"},
+      {"script": "पाणी", "transliteration": "paani"},
+      {"script": "पितो", "transliteration": "pito"}
+    ]
+  },
+  {
+    "english": "She reads a book",
+    "marathi": [
+      {"script": "ती", "transliteration": "tee"},
+      {"script": "पुस्तक", "transliteration": "pustak"},
+      {"script": "वाचते", "transliteration": "vaachte"}
+    ]
+  },
+  {
+    "english": "The dog is big",
+    "marathi": [
+      {"script": "कुत्रा", "transliteration": "kutraa"},
+      {"script": "मोठा", "transliteration": "mothaa"},
+      {"script": "आहे", "transliteration": "aahe"}
+    ]
+  },
+  {
+    "english": "We are happy today",
+    "marathi": [
+      {"script": "आम्ही", "transliteration": "aamhee"},
+      {"script": "आज", "transliteration": "aaj"},
+      {"script": "आनंदी", "transliteration": "aanandi"},
+      {"script": "आहोत", "transliteration": "aahot"}
+    ]
+  },
+  {
+    "english": "He is going home",
+    "marathi": [
+      {"script": "तो", "transliteration": "to"},
+      {"script": "घरी", "transliteration": "ghari"},
+      {"script": "जात", "transliteration": "jaat"},
+      {"script": "आहे", "transliteration": "aahe"}
+    ]
+  },
+  {
+    "english": "The food is very good",
+    "marathi": [
+      {"script": "अन्न", "transliteration": "anna"},
+      {"script": "खूप", "transliteration": "khoop"},
+      {"script": "चांगले", "transliteration": "chaangle"},
+      {"script": "आहे", "transliteration": "aahe"}
+    ]
+  },
+  {
+    "english": "You write beautifully",
+    "marathi": [
+      {"script": "तू", "transliteration": "too"},
+      {"script": "सुंदर", "transliteration": "sundar"},
+      {"script": "लिहितोस", "transliteration": "lihitos"}
+    ]
+  },
+  {
+    "english": "They work fast",
+    "marathi": [
+      {"script": "ते", "transliteration": "te"},
+      {"script": "जलद", "transliteration": "jalad"},
+      {"script": "काम", "transliteration": "kaam"},
+      {"script": "करतात", "transliteration": "kartaat"}
+    ]
+  },
+  {
+    "english": "I see the moon",
+    "marathi": [
+      {"script": "मी", "transliteration": "mee"},
+      {"script": "चंद्र", "transliteration": "chandra"},
+      {"script": "पाहतो", "transliteration": "paahto"}
+    ]
+  },
+  {
+    "english": "The water is cold",
+    "marathi": [
+      {"script": "पाणी", "transliteration": "paani"},
+      {"script": "थंड", "transliteration": "thand"},
+      {"script": "आहे", "transliteration": "aahe"}
+    ]
+  }
+]

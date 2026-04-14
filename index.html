@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Marathi - Language App</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#4f46e5',
+                        secondary: '#ec4899',
+                        dark: '#0f172a',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans min-h-screen flex flex-col">
+
+    <!-- Header Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-10 p-4">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+                Learn Marathi
+            </h1>
+            <nav class="flex gap-4">
+                <button id="nav-dictionary" class="nav-btn active text-primary font-semibold border-b-2 border-primary pb-1 transition">Dictionary</button>
+                <button id="nav-sentence" class="nav-btn text-gray-500 hover:text-primary font-semibold transition pb-1">Sentence Builder</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow flex justify-center p-4">
+        
+        <!-- View 1: Dictionary -->
+        <section id="dictionary-view" class="view-section w-full max-w-4xl active-view">
+            <div class="mb-6 flex flex-col md:flex-row gap-4 justify-between items-center">
+                <h2 class="text-3xl font-semibold text-dark">Vocabulary</h2>
+                <div class="relative w-full md:w-auto">
+                    <input type="text" id="searchInput" placeholder="Search English word..." 
+                           class="w-full md:w-64 px-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary shadow-sm transition">
+                </div>
+            </div>
+            
+            <div id="dictionary-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Dictionary items will be injected here -->
+                <div class="text-center text-gray-500 col-span-full py-10">Loading words...</div>
+            </div>
+        </section>
+
+        <!-- View 2: Sentence Builder -->
+        <section id="sentence-view" class="view-section w-full max-w-4xl hidden">
+            <h2 class="text-3xl font-semibold text-dark mb-2 text-center">Construct the Sentence</h2>
+            <p class="text-center text-gray-500 mb-8">Click the Marathi words in the correct order to match the English sentence.</p>
+
+            <div class="bg-white rounded-2xl shadow-lg p-6 lg:p-10">
+                <!-- Score & controls -->
+                <div class="flex justify-between items-center mb-6">
+                    <div class="text-lg font-medium text-gray-600">Score: <span id="score-display" class="text-primary font-bold">0</span></div>
+                    <div class="flex gap-2">
+                        <button id="hint-btn" class="text-sm px-3 py-1 bg-yellow-100 text-yellow-700 rounded-lg hover:bg-yellow-200 transition">Hint</button>
+                        <button id="shuffle-btn" class="text-sm px-3 py-1 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition">Shuffle</button>
+                    </div>
+                </div>
+
+                <!-- Target English Sentence -->
+                <div class="bg-gradient-to-r from-blue-50 relative to-indigo-50 border border-blue-100 rounded-xl p-6 mb-8 text-center">
+                    <span class="text-xs font-bold uppercase text-blue-400 absolute top-2 left-4">Translate this</span>
+                    <h3 id="target-sentence" class="text-2xl font-bold text-dark mt-2">Loading sentence...</h3>
+                </div>
+
+                <!-- Selected Words Area (User's answer) -->
+                <div id="selected-words-area" class="min-h-[80px] border-2 border-dashed border-gray-300 rounded-xl p-4 flex flex-wrap gap-3 items-center justify-center mb-8 bg-gray-50 transition-colors">
+                    <span class="text-gray-400 italic">Select words from below...</span>
+                </div>
+
+                <!-- Word Options Area -->
+                <div id="word-options-area" class="flex flex-wrap gap-3 justify-center mb-8">
+                    <!-- Word option buttons will be injected here -->
+                </div>
+
+                <!-- Feedback Area & Next btn -->
+                <div class="flex flex-col items-center gap-4">
+                    <div id="feedback-message" class="text-lg font-semibold h-6 text-center"></div>
+                    <div class="flex gap-4">
+                        <button id="check-btn" class="hidden px-6 py-2 bg-primary text-white font-semibold rounded-lg shadow hover:bg-indigo-700 transition transform hover:scale-105">Check Answer</button>
+                        <button id="next-btn" class="hidden px-6 py-2 bg-secondary text-white font-semibold rounded-lg shadow hover:bg-pink-600 transition transform hover:scale-105">Next Sentence</button>
+                        <button id="retry-btn" class="hidden px-6 py-2 bg-gray-500 text-white font-semibold rounded-lg shadow hover:bg-gray-600 transition">Clear Options</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-gray-400 text-center py-6 mt-12">
+        <p>© 2026 Language Learning App. Built with vanilla JS.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/dataLoader.js"></script>
+    <script src="js/dictionary.js"></script>
+    <script src="js/sentenceGame.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
