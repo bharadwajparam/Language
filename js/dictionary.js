@@ -16,26 +16,9 @@ const Dictionary = {
         if (wordsToRender.length === 0) {
             grid.innerHTML = '<div class="text-center text-textSecondary col-span-full py-10">No words found.</div>';
             return;
-        }
-
-        const emojiMap = {
-            "water": "💧", "food": "🍽️", "house": "🏠", "man": "👨", "woman": "👩", "child": "🧒", 
-            "I": "👤", "you": "👉", "he": "👨", "she": "👩", "we": "👥", "this": "👇", "that": "👉", 
-            "eat": "🍔", "drink": "🥤", "go": "🚶", "come": "🏃", "see": "👀", "speak": "🗣️", 
-            "do": "🛠️", "big": "🐘", "small": "🐁", "good": "👍", "bad": "👎", "yes": "✔️", "no": "❌", 
-            "school": "🏫", "book": "📖", "friend": "🤝", "family": "👨‍👩‍👧‍👦", "time": "⏱️", "day": "☀️", 
-            "today": "📅", "tomorrow": "⏭️", "yesterday": "⏮️", "work": "💼", "play": "🎮", "read": "📚", 
-            "write": "✍️", "run": "🏃", "walk": "🚶", "happy": "😊", "sad": "😢", "fast": "⚡", 
-            "slow": "🐢", "new": "✨", "because": "🔗", "but": "✋", "and": "➕", "if": "❓", 
-            "then": "➡️", "before": "⏪", "after": "⏩", "always": "🔄", "sometimes": "⏳", "never": "🚫", 
-            "think": "🤔", "know": "🧠", "understand": "💡", "important": "❗", "different": "🔀", 
-            "experience": "🌟", "decision": "⚖️", "problem": "🧩", "solution": "🔑", "improve": "📈", 
-            "create": "🎨", "develop": "🏗️", "possible": "✅", "necessary": "📌", "difficult": "🧗"
-        };
-
         wordsToRender.forEach(item => {
             const card = document.createElement('div');
-            const emoji = emojiMap[item.word] || item.word.charAt(0).toUpperCase();
+            const emoji = item.emoji || item.word.charAt(0).toUpperCase();
 
             card.className = 'dict-card relative bg-surface p-6 rounded-xl shadow-lg border border-borderDark flex flex-col justify-center items-center text-center';
             card.innerHTML = `
@@ -44,7 +27,7 @@ const Dictionary = {
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                 </button>
                 <div class="w-20 h-20 rounded-full bg-highlight border border-borderDark flex items-center justify-center mb-4 mt-2 shadow-inner overflow-hidden relative">
-                    <span class="text-4xl text-white ${emojiMap[item.word] ? '' : 'opacity-50 text-gray-400 font-bold'}">${emoji}</span>
+                    <span class="text-4xl text-white ${item.emoji ? '' : 'opacity-50 text-gray-400 font-bold'}">${emoji}</span>
                 </div>
                 <h3 class="text-xl text-white font-medium mb-1 capitalize">${item.word}</h3>
                 <div class="text-3xl filter font-bold text-primary mb-1 mt-1">${item.marathi.script}</div>

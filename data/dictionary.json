@@ -6,7 +6,8 @@
       "script": "पाणी",
       "transliteration": "paani"
     },
-    "level": "Beginner"
+    "level": "Beginner",
+    "emoji": "💧"
   },
   {
     "word": "food",
@@ -15,7 +16,8 @@
       "script": "अन्न",
       "transliteration": "anna"
     },
-    "level": "Beginner"
+    "level": "Beginner",
+    "emoji": "🍽️"
   },
   {
     "word": "house",
@@ -24,7 +26,8 @@
       "script": "घर",
       "transliteration": "ghar"
     },
-    "level": "Beginner"
+    "level": "Beginner",
+    "emoji": "🏠"
   },
   {
     "word": "man",
@@ -33,7 +36,8 @@
       "script": "माणूस",
       "transliteration": "maanus"
     },
-    "level": "Beginner"
+    "level": "Beginner",
+    "emoji": "👨"
   },
   {
     "word": "woman",
@@ -42,7 +46,8 @@
       "script": "स्त्री",
       "transliteration": "stree"
     },
-    "level": "Beginner"
+    "level": "Beginner",
+    "emoji": "👩"
   },
   {
     "word": "child",
@@ -51,7 +56,8 @@
       "script": "मुल",
       "transliteration": "mul"
     },
-    "level": "Beginner"
+    "level": "Beginner",
+    "emoji": "🧒"
   },
   {
     "word": "I",
@@ -60,7 +66,8 @@
       "script": "मी",
       "transliteration": "mee"
     },
-    "level": "Beginner"
+    "level": "Beginner",
+    "emoji": "👤"
   },
   {
     "word": "you",
@@ -69,7 +76,8 @@
       "script": "तू",
       "transliteration": "too"
     },
-    "level": "Beginner"
+    "level": "Beginner",
+    "emoji": "👉"
   },
   {
     "word": "he",
@@ -78,7 +86,8 @@
       "script": "तो",
       "transliteration": "to"
     },
-    "level": "Beginner"
+    "level": "Beginner",
+    "emoji": "👨"
   },
   {
     "word": "she",
@@ -87,7 +96,8 @@
       "script": "ती",
       "transliteration": "tee"
     },
-    "level": "Beginner"
+    "level": "Beginner",
+    "emoji": "👩"
   },
   {
     "word": "we",
@@ -96,7 +106,8 @@
       "script": "आम्ही",
       "transliteration": "aamhi"
     },
-    "level": "Beginner"
+    "level": "Beginner",
+    "emoji": "👥"
   },
   {
     "word": "this",
@@ -105,7 +116,8 @@
       "script": "हे",
       "transliteration": "he"
     },
-    "level": "Beginner"
+    "level": "Beginner",
+    "emoji": "👇"
   },
   {
     "word": "that",
@@ -114,7 +126,8 @@
       "script": "ते",
       "transliteration": "te"
     },
-    "level": "Beginner"
+    "level": "Beginner",
+    "emoji": "👉"
   },
   {
     "word": "eat",
@@ -123,7 +136,8 @@
       "script": "खाणे",
       "transliteration": "khane"
     },
-    "level": "Beginner"
+    "level": "Beginner",
+    "emoji": "🍔"
   },
   {
     "word": "drink",
@@ -132,7 +146,8 @@
       "script": "पिणे",
       "transliteration": "pine"
     },
-    "level": "Beginner"
+    "level": "Beginner",
+    "emoji": "🥤"
   },
   {
     "word": "go",
@@ -141,7 +156,8 @@
       "script": "जाणे",
       "transliteration": "jaane"
     },
-    "level": "Beginner"
+    "level": "Beginner",
+    "emoji": "🚶"
   },
   {
     "word": "come",
@@ -150,7 +166,8 @@
       "script": "येणे",
       "transliteration": "yene"
     },
-    "level": "Beginner"
+    "level": "Beginner",
+    "emoji": "🏃"
   },
   {
     "word": "see",
@@ -159,7 +176,8 @@
       "script": "पाहणे",
       "transliteration": "pahane"
     },
-    "level": "Beginner"
+    "level": "Beginner",
+    "emoji": "👀"
   },
   {
     "word": "speak",
@@ -168,7 +186,8 @@
       "script": "बोलणे",
       "transliteration": "bolane"
     },
-    "level": "Beginner"
+    "level": "Beginner",
+    "emoji": "🗣️"
   },
   {
     "word": "do",
@@ -177,7 +196,8 @@
       "script": "करणे",
       "transliteration": "karane"
     },
-    "level": "Beginner"
+    "level": "Beginner",
+    "emoji": "🛠️"
   },
   {
     "word": "big",
@@ -186,7 +206,8 @@
       "script": "मोठा",
       "transliteration": "motha"
     },
-    "level": "Beginner"
+    "level": "Beginner",
+    "emoji": "🐘"
   },
   {
     "word": "small",
@@ -195,7 +216,8 @@
       "script": "लहान",
       "transliteration": "lahan"
     },
-    "level": "Beginner"
+    "level": "Beginner",
+    "emoji": "🐁"
   },
   {
     "word": "good",
@@ -204,7 +226,8 @@
       "script": "चांगला",
       "transliteration": "changla"
     },
-    "level": "Beginner"
+    "level": "Beginner",
+    "emoji": "👍"
   },
   {
     "word": "bad",
@@ -213,7 +236,8 @@
       "script": "वाईट",
       "transliteration": "vaait"
     },
-    "level": "Beginner"
+    "level": "Beginner",
+    "emoji": "👎"
   },
   {
     "word": "yes",
@@ -222,7 +246,8 @@
       "script": "हो",
       "transliteration": "ho"
     },
-    "level": "Beginner"
+    "level": "Beginner",
+    "emoji": "✔️"
   },
   {
     "word": "no",
@@ -231,7 +256,8 @@
       "script": "नाही",
       "transliteration": "naahi"
     },
-    "level": "Beginner"
+    "level": "Beginner",
+    "emoji": "❌"
   },
   {
     "word": "school",
@@ -240,7 +266,8 @@
       "script": "शाळा",
       "transliteration": "shaala"
     },
-    "level": "Intermediate"
+    "level": "Intermediate",
+    "emoji": "🏫"
   },
   {
     "word": "book",
@@ -249,7 +276,8 @@
       "script": "पुस्तक",
       "transliteration": "pustak"
     },
-    "level": "Intermediate"
+    "level": "Intermediate",
+    "emoji": "📖"
   },
   {
     "word": "friend",
@@ -258,7 +286,8 @@
       "script": "मित्र",
       "transliteration": "mitra"
     },
-    "level": "Intermediate"
+    "level": "Intermediate",
+    "emoji": "🤝"
   },
   {
     "word": "family",
@@ -267,7 +296,8 @@
       "script": "कुटुंब",
       "transliteration": "kutumb"
     },
-    "level": "Intermediate"
+    "level": "Intermediate",
+    "emoji": "👨‍👩‍👧‍👦"
   },
   {
     "word": "time",
@@ -276,7 +306,8 @@
       "script": "वेळ",
       "transliteration": "vel"
     },
-    "level": "Intermediate"
+    "level": "Intermediate",
+    "emoji": "⏱️"
   },
   {
     "word": "day",
@@ -285,7 +316,8 @@
       "script": "दिवस",
       "transliteration": "divas"
     },
-    "level": "Intermediate"
+    "level": "Intermediate",
+    "emoji": "☀️"
   },
   {
     "word": "today",
@@ -294,7 +326,8 @@
       "script": "आज",
       "transliteration": "aaj"
     },
-    "level": "Intermediate"
+    "level": "Intermediate",
+    "emoji": "📅"
   },
   {
     "word": "tomorrow",
@@ -303,7 +336,8 @@
       "script": "उद्या",
       "transliteration": "udya"
     },
-    "level": "Intermediate"
+    "level": "Intermediate",
+    "emoji": "⏭️"
   },
   {
     "word": "yesterday",
@@ -312,7 +346,8 @@
       "script": "काल",
       "transliteration": "kaal"
     },
-    "level": "Intermediate"
+    "level": "Intermediate",
+    "emoji": "⏮️"
   },
   {
     "word": "work",
@@ -321,7 +356,8 @@
       "script": "काम",
       "transliteration": "kaam"
     },
-    "level": "Intermediate"
+    "level": "Intermediate",
+    "emoji": "💼"
   },
   {
     "word": "play",
@@ -330,7 +366,8 @@
       "script": "खेळणे",
       "transliteration": "khelane"
     },
-    "level": "Intermediate"
+    "level": "Intermediate",
+    "emoji": "🎮"
   },
   {
     "word": "read",
@@ -339,7 +376,8 @@
       "script": "वाचणे",
       "transliteration": "vachane"
     },
-    "level": "Intermediate"
+    "level": "Intermediate",
+    "emoji": "📚"
   },
   {
     "word": "write",
@@ -348,7 +386,8 @@
       "script": "लिहिणे",
       "transliteration": "lihine"
     },
-    "level": "Intermediate"
+    "level": "Intermediate",
+    "emoji": "✍️"
   },
   {
     "word": "run",
@@ -357,7 +396,8 @@
       "script": "धावणे",
       "transliteration": "dhaavane"
     },
-    "level": "Intermediate"
+    "level": "Intermediate",
+    "emoji": "🏃"
   },
   {
     "word": "walk",
@@ -366,7 +406,8 @@
       "script": "चालणे",
       "transliteration": "chalane"
     },
-    "level": "Intermediate"
+    "level": "Intermediate",
+    "emoji": "🚶"
   },
   {
     "word": "happy",
@@ -375,7 +416,8 @@
       "script": "आनंदी",
       "transliteration": "anandi"
     },
-    "level": "Intermediate"
+    "level": "Intermediate",
+    "emoji": "😊"
   },
   {
     "word": "sad",
@@ -384,7 +426,8 @@
       "script": "दुःखी",
       "transliteration": "dukhi"
     },
-    "level": "Intermediate"
+    "level": "Intermediate",
+    "emoji": "😢"
   },
   {
     "word": "fast",
@@ -393,7 +436,8 @@
       "script": "जलद",
       "transliteration": "jalad"
     },
-    "level": "Intermediate"
+    "level": "Intermediate",
+    "emoji": "⚡"
   },
   {
     "word": "slow",
@@ -402,7 +446,8 @@
       "script": "हळू",
       "transliteration": "halu"
     },
-    "level": "Intermediate"
+    "level": "Intermediate",
+    "emoji": "🐢"
   },
   {
     "word": "new",
@@ -411,7 +456,8 @@
       "script": "नवीन",
       "transliteration": "naveen"
     },
-    "level": "Intermediate"
+    "level": "Intermediate",
+    "emoji": "✨"
   },
   {
     "word": "because",
@@ -420,7 +466,8 @@
       "script": "कारण",
       "transliteration": "karan"
     },
-    "level": "Advanced"
+    "level": "Advanced",
+    "emoji": "🔗"
   },
   {
     "word": "but",
@@ -429,7 +476,8 @@
       "script": "पण",
       "transliteration": "pan"
     },
-    "level": "Advanced"
+    "level": "Advanced",
+    "emoji": "✋"
   },
   {
     "word": "and",
@@ -438,7 +486,8 @@
       "script": "आणि",
       "transliteration": "aani"
     },
-    "level": "Advanced"
+    "level": "Advanced",
+    "emoji": "➕"
   },
   {
     "word": "if",
@@ -447,7 +496,8 @@
       "script": "जर",
       "transliteration": "jar"
     },
-    "level": "Advanced"
+    "level": "Advanced",
+    "emoji": "❓"
   },
   {
     "word": "then",
@@ -456,7 +506,8 @@
       "script": "तर",
       "transliteration": "tar"
     },
-    "level": "Advanced"
+    "level": "Advanced",
+    "emoji": "➡️"
   },
   {
     "word": "before",
@@ -465,7 +516,8 @@
       "script": "आधी",
       "transliteration": "aadhi"
     },
-    "level": "Advanced"
+    "level": "Advanced",
+    "emoji": "⏪"
   },
   {
     "word": "after",
@@ -474,7 +526,8 @@
       "script": "नंतर",
       "transliteration": "nantar"
     },
-    "level": "Advanced"
+    "level": "Advanced",
+    "emoji": "⏩"
   },
   {
     "word": "always",
@@ -483,7 +536,8 @@
       "script": "नेहमी",
       "transliteration": "nehmi"
     },
-    "level": "Advanced"
+    "level": "Advanced",
+    "emoji": "🔄"
   },
   {
     "word": "sometimes",
@@ -492,7 +546,8 @@
       "script": "कधी कधी",
       "transliteration": "kadhi kadhi"
     },
-    "level": "Advanced"
+    "level": "Advanced",
+    "emoji": "⏳"
   },
   {
     "word": "never",
@@ -501,7 +556,8 @@
       "script": "कधीच नाही",
       "transliteration": "kadhich nahi"
     },
-    "level": "Advanced"
+    "level": "Advanced",
+    "emoji": "🚫"
   },
   {
     "word": "think",
@@ -510,7 +566,8 @@
       "script": "विचार करणे",
       "transliteration": "vichar karane"
     },
-    "level": "Advanced"
+    "level": "Advanced",
+    "emoji": "🤔"
   },
   {
     "word": "know",
@@ -519,7 +576,8 @@
       "script": "माहित असणे",
       "transliteration": "mahiti asane"
     },
-    "level": "Advanced"
+    "level": "Advanced",
+    "emoji": "🧠"
   },
   {
     "word": "understand",
@@ -528,7 +586,8 @@
       "script": "समजणे",
       "transliteration": "samajane"
     },
-    "level": "Advanced"
+    "level": "Advanced",
+    "emoji": "💡"
   },
   {
     "word": "important",
@@ -537,7 +596,8 @@
       "script": "महत्त्वाचे",
       "transliteration": "mahatvache"
     },
-    "level": "Advanced"
+    "level": "Advanced",
+    "emoji": "❗"
   },
   {
     "word": "different",
@@ -546,7 +606,8 @@
       "script": "वेगळे",
       "transliteration": "vegale"
     },
-    "level": "Advanced"
+    "level": "Advanced",
+    "emoji": "🔀"
   },
   {
     "word": "experience",
@@ -555,7 +616,8 @@
       "script": "अनुभव",
       "transliteration": "anubhav"
     },
-    "level": "Advanced"
+    "level": "Advanced",
+    "emoji": "🌟"
   },
   {
     "word": "decision",
@@ -564,7 +626,8 @@
       "script": "निर्णय",
       "transliteration": "nirnay"
     },
-    "level": "Advanced"
+    "level": "Advanced",
+    "emoji": "⚖️"
   },
   {
     "word": "problem",
@@ -573,7 +636,8 @@
       "script": "समस्या",
       "transliteration": "samasya"
     },
-    "level": "Advanced"
+    "level": "Advanced",
+    "emoji": "🧩"
   },
   {
     "word": "solution",
@@ -582,7 +646,8 @@
       "script": "उपाय",
       "transliteration": "upaay"
     },
-    "level": "Advanced"
+    "level": "Advanced",
+    "emoji": "🔑"
   },
   {
     "word": "improve",
@@ -591,7 +656,8 @@
       "script": "सुधारणे",
       "transliteration": "sudharane"
     },
-    "level": "Advanced"
+    "level": "Advanced",
+    "emoji": "📈"
   },
   {
     "word": "create",
@@ -600,7 +666,8 @@
       "script": "निर्माण करणे",
       "transliteration": "nirman karane"
     },
-    "level": "Advanced"
+    "level": "Advanced",
+    "emoji": "🎨"
   },
   {
     "word": "develop",
@@ -609,7 +676,8 @@
       "script": "विकास करणे",
       "transliteration": "vikas karane"
     },
-    "level": "Advanced"
+    "level": "Advanced",
+    "emoji": "🏗️"
   },
   {
     "word": "possible",
@@ -618,7 +686,8 @@
       "script": "शक्य",
       "transliteration": "shakya"
     },
-    "level": "Advanced"
+    "level": "Advanced",
+    "emoji": "✅"
   },
   {
     "word": "necessary",
@@ -627,7 +696,8 @@
       "script": "आवश्यक",
       "transliteration": "aavashyak"
     },
-    "level": "Advanced"
+    "level": "Advanced",
+    "emoji": "📌"
   },
   {
     "word": "difficult",
@@ -636,6 +706,7 @@
       "script": "कठीण",
       "transliteration": "kathin"
     },
-    "level": "Advanced"
+    "level": "Advanced",
+    "emoji": "🧗"
   }
 ]
