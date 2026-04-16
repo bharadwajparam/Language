@@ -3,7 +3,7 @@ const Profile = {
         activeProfileId: 'default',
         profiles: {
             'default': {
-                name: 'Default User',
+                name: 'Guest',
                 masteredSentences: [], 
                 lastActiveDate: null,
                 currentStreak: 0,
@@ -27,6 +27,7 @@ const Profile = {
     bindEvents() {
         const selector = document.getElementById('profile-selector');
         const newBtn = document.getElementById('new-profile-btn');
+        const deleteBtn = document.getElementById('delete-profile-btn');
         
         if (selector) {
             selector.addEventListener('change', (e) => {
@@ -79,6 +80,19 @@ const Profile = {
                     }
                 });
             }
+        }
+        
+        if (deleteBtn) {
+            deleteBtn.addEventListener('click', () => {
+                const activeId = this.root.activeProfileId;
+                if (activeId !== 'default' && confirm(`Are you sure you want to permanently delete profile '${this.data.name}'?`)) {
+                    delete this.root.profiles[activeId];
+                    this.root.activeProfileId = 'default';
+                    this.recordDailyLogin();
+                    this.saveProfile();
+                    if (window.SentenceGame) window.SentenceGame.resetSelectionArea();
+                }
+            });
         }
     },
 
@@ -178,6 +192,15 @@ const Profile = {
                 option.textContent = profile.name;
                 if (id === this.root.activeProfileId) option.selected = true;
                 selector.appendChild(option);
+            }
+        }
+
+        const deleteBtn = document.getElementById('delete-profile-btn');
+        if (deleteBtn) {
+            if (this.root.activeProfileId === 'default') {
+                deleteBtn.classList.add('hidden');
+            } else {
+                deleteBtn.classList.remove('hidden');
             }
         }
 

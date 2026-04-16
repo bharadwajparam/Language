@@ -9,12 +9,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     const dictView = document.getElementById('dictionary-view');
     const sentView = document.getElementById('sentence-view');
     const profView = document.getElementById('profile-view');
+    const manageProfView = document.getElementById('manage-profiles-view');
 
     function switchView(view) {
         // Reset all
-        [dictView, sentView, profView].forEach(v => {
-            v.classList.remove('active-view');
-            v.classList.add('hidden');
+        [dictView, sentView, profView, manageProfView].forEach(v => {
+            if (v) {
+                v.classList.remove('active-view');
+                v.classList.add('hidden');
+            }
         });
         
         [navDict, navSent, navProf].forEach(n => {
@@ -34,11 +37,20 @@ document.addEventListener('DOMContentLoaded', async () => {
             navSent.classList.add('active', 'border-b-2', 'border-primary', 'text-primary');
             navSent.classList.remove('text-gray-500');
         } else if (view === 'profile') {
-            profView.classList.add('active-view');
-            profView.classList.remove('hidden');
-            navProf.classList.add('active', 'border-b-2', 'border-primary', 'text-primary');
-            navProf.classList.remove('text-gray-500');
-            // Refresh explicitly on view
+            if (profView) {
+                profView.classList.add('active-view');
+                profView.classList.remove('hidden');
+            }
+            if (navProf) {
+                navProf.classList.add('active', 'border-b-2', 'border-primary', 'text-primary');
+                navProf.classList.remove('text-gray-500');
+            }
+            if (window.Profile) window.Profile.renderProfileUI();
+        } else if (view === 'manage-profiles') {
+            if (manageProfView) {
+                manageProfView.classList.add('active-view');
+                manageProfView.classList.remove('hidden');
+            }
             if (window.Profile) window.Profile.renderProfileUI();
         }
     }
@@ -49,7 +61,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const headerProfileContainer = document.getElementById('header-profile-container');
     if (headerProfileContainer) {
-        headerProfileContainer.addEventListener('click', () => switchView('profile'));
+        headerProfileContainer.addEventListener('click', () => switchView('manage-profiles'));
     }
 
     // 2. Load Data and Initialize Apps

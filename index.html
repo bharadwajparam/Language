@@ -71,7 +71,7 @@
                 <button id="nav-sentence"
                     class="nav-btn text-textSecondary font-medium hover:text-white transition">Sentence Builder</button>
                 <button id="nav-profile"
-                    class="nav-btn text-textSecondary font-medium hover:text-white transition">Profile</button>
+                    class="nav-btn text-textSecondary font-medium hover:text-white transition">Learner Dashboard</button>
             </nav>
 
             <div class="flex items-center gap-3 cursor-pointer group" id="header-profile-container" title="Manage Profiles">
@@ -301,21 +301,12 @@
             </div>
         </section>
 
-        <!-- View 3: Profile -->
+        <!-- View 3: Profile (Learner Dashboard) -->
         <section id="profile-view" class="view-section w-full hidden">
             <div class="max-w-5xl mx-auto w-full">
-                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8">
-                    <div>
-                        <h2 class="text-3xl font-semibold text-white tracking-tight">Your Progress</h2>
-                        <p class="text-sm text-textSecondary mt-1">Track your learning journey.</p>
-                    </div>
-                    <div class="flex items-center gap-3 mt-4 sm:mt-0">
-                        <select id="profile-selector"
-                            class="px-4 py-2 bg-surface border border-borderDark rounded-md focus:outline-none focus:border-borderDark text-textPrimary text-sm font-medium cursor-pointer shadow-sm appearance-none pr-8 relative"></select>
-                        <button id="new-profile-btn"
-                            class="px-4 py-2 bg-primary text-[#121212] rounded-md text-sm font-semibold shadow hover:bg-green-400 transition">Add
-                            Profile</button>
-                    </div>
+                <div class="flex flex-col mb-8">
+                    <h2 class="text-3xl font-semibold text-white tracking-tight">Your Progress</h2>
+                    <p class="text-sm text-textSecondary mt-1">Track your learning journey.</p>
                 </div>
 
                 <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
@@ -364,6 +355,35 @@
                     </h3>
                     <div id="mastered-sentences-list" class="max-h-96 overflow-y-auto pr-2 space-y-2">
                         <!-- Mastered items will inject here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- View 4: Profile Management -->
+        <section id="manage-profiles-view" class="view-section w-full hidden">
+            <div class="max-w-xl mx-auto w-full">
+                <h2 class="text-3xl font-semibold text-white mb-2 tracking-tight">Manage Profiles</h2>
+                <p class="text-textSecondary mb-8 text-sm">Switch, create, or drop learning profiles.</p>
+                
+                <div class="bg-surface rounded-xl border border-borderDark p-8 shadow-2xl relative overflow-hidden flex flex-col gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-textSecondary mb-2">Active Profile</label>
+                        <div class="relative">
+                            <select id="profile-selector"
+                                    class="w-full px-4 py-3 bg-background border border-borderDark rounded-md focus:outline-none focus:border-borderDark text-white text-base font-medium cursor-pointer shadow-sm appearance-none relative"></select>
+                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-textSecondary">
+                                <svg class="fill-current h-4 w-4" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 mt-4 border-t border-borderDark pt-6">
+                        <button id="new-profile-btn"
+                            class="flex-1 px-4 py-3 bg-primary text-[#121212] rounded-md font-semibold shadow-lg shadow-primary/20 hover:bg-green-400 transition transform hover:-translate-y-0.5 text-center">Add
+                            New Profile</button>
+                        <button id="delete-profile-btn"
+                            class="px-4 py-3 bg-red-500/10 border border-red-500/30 text-rose-500 hover:bg-rose-600 hover:text-white rounded-md font-medium transition text-center hidden">Delete Active</button>
                     </div>
                 </div>
             </div>
