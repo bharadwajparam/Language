@@ -170,6 +170,13 @@ const SentenceGame = {
     
     renderSelectedWords() {
         const container = document.getElementById('selected-words-area');
+        
+        // Reset container classes, feedback message, and continue button whenever selection changes
+        container.className = 'min-h-[90px] border border-dashed border-borderDark rounded-xl p-4 flex flex-wrap gap-3 items-center justify-center mb-8 bg-[#151515] transition-all';
+        document.getElementById('feedback-message').textContent = '';
+        document.getElementById('next-btn').classList.add('hidden');
+        document.getElementById('retry-btn').classList.remove('hidden');
+
         container.innerHTML = '';
         
         if (this.selectedWords.length === 0) {

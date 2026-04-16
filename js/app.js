@@ -47,6 +47,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     navSent.addEventListener('click', () => switchView('sentence'));
     if (navProf) navProf.addEventListener('click', () => switchView('profile'));
 
+    const headerProfileContainer = document.getElementById('header-profile-container');
+    if (headerProfileContainer) {
+        headerProfileContainer.addEventListener('click', () => switchView('profile'));
+    }
+
     // 2. Load Data and Initialize Apps
     const dictionaryData = await window.DataLoader.loadDictionary();
     const sentencesData = await window.DataLoader.loadSentences();

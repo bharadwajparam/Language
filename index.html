@@ -74,8 +74,9 @@
                     class="nav-btn text-textSecondary font-medium hover:text-white transition">Profile</button>
             </nav>
 
-            <div class="flex items-center gap-4">
-                <button class="text-textPrimary hover:text-primary transition" title="Toggle Profile Modal"
+            <div class="flex items-center gap-3 cursor-pointer group" id="header-profile-container" title="Manage Profiles">
+                <span id="active-profile-name" class="text-sm font-medium text-textSecondary group-hover:text-white transition"></span>
+                <button class="text-textSecondary group-hover:text-primary transition flex items-center"
                     id="header-profile-btn">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="flex-shrink-0"
                         stroke="currentColor" stroke-width="2">

@@ -164,6 +164,11 @@ const Profile = {
     },
 
     renderProfileUI() {
+        const headerNameEl = document.getElementById('active-profile-name');
+        if (headerNameEl && this.data) {
+            headerNameEl.textContent = this.data.name;
+        }
+
         const selector = document.getElementById('profile-selector');
         if (selector) {
             selector.innerHTML = '';
