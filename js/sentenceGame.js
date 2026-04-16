@@ -7,6 +7,10 @@ const SentenceGame = {
     mediaRecorder: null,
     audioChunks: [],
     audioContext: null,
+    preloadedAudio: null,
+    waitingForAudio: false,
+    workerReady: false,
+    isSynthesizing: false,
     
     init(sentences) {
         this.allSentences = sentences;
@@ -34,13 +38,51 @@ const SentenceGame = {
 
     playTTS() {
         if (!this.currentSentence) return;
+        if (this.preloadedAudio) {
+            this.playAudioData(this.preloadedAudio.audio, this.preloadedAudio.sampling_rate);
+        } else {
+            const statusEl = document.getElementById('model-status');
+            statusEl.textContent = "Loading audio...";
+            statusEl.classList.remove('hidden');
+            document.getElementById('listen-btn').disabled = true;
+            this.waitingForAudio = true;
+            if (!this.isSynthesizing) {
+                this.preloadCurrentSentenceAudio();
+            }
+        }
+    },
+
+    preloadCurrentSentenceAudio() {
+        if (!this.workerReady || !this.currentSentence) return;
+        this.preloadedAudio = null;
+        this.isSynthesizing = true;
+        this.waitingForAudio = false;
         const textToSpeak = this.currentSentence.marathi.map(w => w.script).join(' ');
+        this.worker.postMessage({ type: 'synthesize', text: textToSpeak });
+    },
+
+    playAudioData(audio, sampling_rate) {
         const statusEl = document.getElementById('model-status');
-        statusEl.textContent = "Listening...";
+        statusEl.textContent = "Playing...";
         statusEl.classList.remove('hidden');
         document.getElementById('listen-btn').disabled = true;
+
+        if (!this.audioContext) {
+             this.audioContext = new (window.AudioContext || window.webkitAudioContext)({ sampleRate: sampling_rate });
+        } else if (this.audioContext.state === 'suspended') {
+             this.audioContext.resume();
+        }
         
-        this.worker.postMessage({ type: 'synthesize', text: textToSpeak });
+        const audioBuffer = this.audioContext.createBuffer(1, audio.length, sampling_rate);
+        audioBuffer.getChannelData(0).set(audio);
+        const source = this.audioContext.createBufferSource();
+        source.buffer = audioBuffer;
+        source.connect(this.audioContext.destination);
+        source.onended = () => {
+            statusEl.classList.add('hidden');
+            document.getElementById('listen-btn').disabled = false;
+        };
+        source.start();
     },
     
     loadNextSentence() {
@@ -74,6 +116,8 @@ const SentenceGame = {
         // Shuffle marathi words
         const shuffledWords = this.shuffleArray([...this.currentSentence.marathi]);
         this.renderOptions(shuffledWords);
+        
+        this.preloadCurrentSentenceAudio();
     },
     
     renderOptions(words) {
@@ -226,8 +270,10 @@ const SentenceGame = {
                     statusEl.classList.remove('hidden');
                     statusEl.textContent = `Loading model... ${Math.round(info.progress || 0)}%`;
                 } else if (status === 'ready') {
-                    statusEl.textContent = 'Whisper ready';
+                    statusEl.textContent = 'Models ready';
                     setTimeout(() => statusEl.classList.add('hidden'), 2000);
+                    this.workerReady = true;
+                    this.preloadCurrentSentenceAudio();
                 } else if (status === 'transcribing') {
                     statusEl.classList.remove('hidden');
                     statusEl.textContent = 'Transcribing...';
@@ -242,26 +288,19 @@ const SentenceGame = {
                     statusEl.textContent = 'Error: ' + error;
                     document.getElementById('speak-btn').disabled = false;
                     document.getElementById('speak-btn').classList.remove('opacity-50');
+                    if (this.isSynthesizing) {
+                        this.isSynthesizing = false;
+                        document.getElementById('listen-btn').disabled = false;
+                    }
                 } else if (status === 'tts-success') {
                     const { audio, sampling_rate } = event.data;
-                    statusEl.textContent = "Playing...";
+                    this.isSynthesizing = false;
+                    this.preloadedAudio = { audio, sampling_rate };
                     
-                    if (!this.audioContext) {
-                         this.audioContext = new (window.AudioContext || window.webkitAudioContext)({ sampleRate: sampling_rate });
-                    } else if (this.audioContext.state === 'suspended') {
-                         this.audioContext.resume();
+                    if (this.waitingForAudio) {
+                        this.waitingForAudio = false;
+                        this.playAudioData(audio, sampling_rate);
                     }
-                    
-                    const audioBuffer = this.audioContext.createBuffer(1, audio.length, sampling_rate);
-                    audioBuffer.getChannelData(0).set(audio);
-                    const source = this.audioContext.createBufferSource();
-                    source.buffer = audioBuffer;
-                    source.connect(this.audioContext.destination);
-                    source.onended = () => {
-                        statusEl.classList.add('hidden');
-                        document.getElementById('listen-btn').disabled = false;
-                    };
-                    source.start();
                 }
             };
             
