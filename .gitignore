@@ -1,0 +1,15 @@
+# Node / Electron
+node_modules/
+dist/
+dist-*/
+npm-debug.log
+.env
+.DS_Store
+Thumbs.db
+
+# Sensitive Credentials 
+credentials.json
+
+# Python
+__pycache__/
+*.pyc
