@@ -1,36 +1,51 @@
 document.addEventListener('DOMContentLoaded', async () => {
+    // Global State
+    window.appState = { currentLevel: 1 };
+
     // 1. Navigation Logic
     const navDict = document.getElementById('nav-dictionary');
     const navSent = document.getElementById('nav-sentence');
+    const navProf = document.getElementById('nav-profile');
     const dictView = document.getElementById('dictionary-view');
     const sentView = document.getElementById('sentence-view');
+    const profView = document.getElementById('profile-view');
 
     function switchView(view) {
+        // Reset all
+        [dictView, sentView, profView].forEach(v => {
+            v.classList.remove('active-view');
+            v.classList.add('hidden');
+        });
+        
+        [navDict, navSent, navProf].forEach(n => {
+            n.classList.remove('active', 'border-b-2', 'border-primary', 'text-primary');
+            n.classList.add('text-gray-500');
+        });
+
+        // Set active
         if (view === 'dictionary') {
             dictView.classList.add('active-view');
             dictView.classList.remove('hidden');
-            sentView.classList.remove('active-view');
-            sentView.classList.add('hidden');
-            
             navDict.classList.add('active', 'border-b-2', 'border-primary', 'text-primary');
             navDict.classList.remove('text-gray-500');
-            navSent.classList.remove('active', 'border-b-2', 'border-primary', 'text-primary');
-            navSent.classList.add('text-gray-500');
-        } else {
+        } else if (view === 'sentence') {
             sentView.classList.add('active-view');
             sentView.classList.remove('hidden');
-            dictView.classList.remove('active-view');
-            dictView.classList.add('hidden');
-            
             navSent.classList.add('active', 'border-b-2', 'border-primary', 'text-primary');
             navSent.classList.remove('text-gray-500');
-            navDict.classList.remove('active', 'border-b-2', 'border-primary', 'text-primary');
-            navDict.classList.add('text-gray-500');
+        } else if (view === 'profile') {
+            profView.classList.add('active-view');
+            profView.classList.remove('hidden');
+            navProf.classList.add('active', 'border-b-2', 'border-primary', 'text-primary');
+            navProf.classList.remove('text-gray-500');
+            // Refresh explicitly on view
+            if (window.Profile) window.Profile.renderProfileUI();
         }
     }
 
     navDict.addEventListener('click', () => switchView('dictionary'));
     navSent.addEventListener('click', () => switchView('sentence'));
+    if (navProf) navProf.addEventListener('click', () => switchView('profile'));
 
     // 2. Load Data and Initialize Apps
     const dictionaryData = await window.DataLoader.loadDictionary();
@@ -38,4 +53,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     window.Dictionary.init(dictionaryData);
     window.SentenceGame.init(sentencesData);
+    if (window.Profile) await window.Profile.init();
+
+    // Global Level Selector Binding
+    const levelSelector = document.getElementById('global-level');
+    levelSelector.addEventListener('change', (e) => {
+        window.appState.currentLevel = parseInt(e.target.value);
+        window.Dictionary.filterWords();
+        window.SentenceGame.loadNextSentence();
+    });
 });

@@ -1,86 +1,854 @@
 [
   {
+    "id": 1,
     "english": "I drink water",
     "marathi": [
-      {"script": "मी", "transliteration": "mee"},
-      {"script": "पाणी", "transliteration": "paani"},
-      {"script": "पितो", "transliteration": "pito"}
-    ]
+      {
+        "script": "मी",
+        "transliteration": "mee"
+      },
+      {
+        "script": "पाणी",
+        "transliteration": "paani"
+      },
+      {
+        "script": "पितो",
+        "transliteration": "pito"
+      }
+    ],
+    "level": 1
   },
   {
-    "english": "She reads a book",
+    "id": 2,
+    "english": "I eat food",
     "marathi": [
-      {"script": "ती", "transliteration": "tee"},
-      {"script": "पुस्तक", "transliteration": "pustak"},
-      {"script": "वाचते", "transliteration": "vaachte"}
-    ]
+      {
+        "script": "मी",
+        "transliteration": "mee"
+      },
+      {
+        "script": "अन्न",
+        "transliteration": "anna"
+      },
+      {
+        "script": "खातो",
+        "transliteration": "khato"
+      }
+    ],
+    "level": 1
   },
   {
-    "english": "The dog is big",
+    "id": 3,
+    "english": "He goes home",
     "marathi": [
-      {"script": "कुत्रा", "transliteration": "kutraa"},
-      {"script": "मोठा", "transliteration": "mothaa"},
-      {"script": "आहे", "transliteration": "aahe"}
-    ]
+      {
+        "script": "तो",
+        "transliteration": "to"
+      },
+      {
+        "script": "घरी",
+        "transliteration": "ghari"
+      },
+      {
+        "script": "जातो",
+        "transliteration": "jaato"
+      }
+    ],
+    "level": 1
   },
   {
-    "english": "We are happy today",
+    "id": 4,
+    "english": "She drinks water",
     "marathi": [
-      {"script": "आम्ही", "transliteration": "aamhee"},
-      {"script": "आज", "transliteration": "aaj"},
-      {"script": "आनंदी", "transliteration": "aanandi"},
-      {"script": "आहोत", "transliteration": "aahot"}
-    ]
+      {
+        "script": "ती",
+        "transliteration": "tee"
+      },
+      {
+        "script": "पाणी",
+        "transliteration": "paani"
+      },
+      {
+        "script": "पिते",
+        "transliteration": "pite"
+      }
+    ],
+    "level": 1
   },
   {
-    "english": "He is going home",
+    "id": 5,
+    "english": "We see a house",
     "marathi": [
-      {"script": "तो", "transliteration": "to"},
-      {"script": "घरी", "transliteration": "ghari"},
-      {"script": "जात", "transliteration": "jaat"},
-      {"script": "आहे", "transliteration": "aahe"}
-    ]
+      {
+        "script": "आम्ही",
+        "transliteration": "aamhi"
+      },
+      {
+        "script": "घर",
+        "transliteration": "ghar"
+      },
+      {
+        "script": "पाहतो",
+        "transliteration": "paahato"
+      }
+    ],
+    "level": 1
   },
   {
-    "english": "The food is very good",
+    "id": 6,
+    "english": "You speak well",
     "marathi": [
-      {"script": "अन्न", "transliteration": "anna"},
-      {"script": "खूप", "transliteration": "khoop"},
-      {"script": "चांगले", "transliteration": "chaangle"},
-      {"script": "आहे", "transliteration": "aahe"}
-    ]
+      {
+        "script": "तू",
+        "transliteration": "too"
+      },
+      {
+        "script": "चांगले",
+        "transliteration": "changale"
+      },
+      {
+        "script": "बोलतो",
+        "transliteration": "bolto"
+      }
+    ],
+    "level": 1
   },
   {
-    "english": "You write beautifully",
+    "id": 7,
+    "english": "This is good",
     "marathi": [
-      {"script": "तू", "transliteration": "too"},
-      {"script": "सुंदर", "transliteration": "sundar"},
-      {"script": "लिहितोस", "transliteration": "lihitos"}
-    ]
+      {
+        "script": "हे",
+        "transliteration": "he"
+      },
+      {
+        "script": "चांगले",
+        "transliteration": "changale"
+      },
+      {
+        "script": "आहे",
+        "transliteration": "aahe"
+      }
+    ],
+    "level": 1
   },
   {
-    "english": "They work fast",
+    "id": 8,
+    "english": "That is bad",
     "marathi": [
-      {"script": "ते", "transliteration": "te"},
-      {"script": "जलद", "transliteration": "jalad"},
-      {"script": "काम", "transliteration": "kaam"},
-      {"script": "करतात", "transliteration": "kartaat"}
-    ]
+      {
+        "script": "ते",
+        "transliteration": "te"
+      },
+      {
+        "script": "वाईट",
+        "transliteration": "vaait"
+      },
+      {
+        "script": "आहे",
+        "transliteration": "aahe"
+      }
+    ],
+    "level": 1
   },
   {
-    "english": "I see the moon",
+    "id": 9,
+    "english": "The man eats food",
     "marathi": [
-      {"script": "मी", "transliteration": "mee"},
-      {"script": "चंद्र", "transliteration": "chandra"},
-      {"script": "पाहतो", "transliteration": "paahto"}
-    ]
+      {
+        "script": "माणूस",
+        "transliteration": "maanus"
+      },
+      {
+        "script": "अन्न",
+        "transliteration": "anna"
+      },
+      {
+        "script": "खातो",
+        "transliteration": "khato"
+      }
+    ],
+    "level": 1
   },
   {
-    "english": "The water is cold",
+    "id": 10,
+    "english": "The child drinks water",
     "marathi": [
-      {"script": "पाणी", "transliteration": "paani"},
-      {"script": "थंड", "transliteration": "thand"},
-      {"script": "आहे", "transliteration": "aahe"}
-    ]
+      {
+        "script": "मुल",
+        "transliteration": "mul"
+      },
+      {
+        "script": "पाणी",
+        "transliteration": "paani"
+      },
+      {
+        "script": "पितो",
+        "transliteration": "pito"
+      }
+    ],
+    "level": 1
+  },
+  {
+    "id": 11,
+    "english": "I go to school",
+    "marathi": [
+      {
+        "script": "मी",
+        "transliteration": "mee"
+      },
+      {
+        "script": "शाळेत",
+        "transliteration": "shaalet"
+      },
+      {
+        "script": "जातो",
+        "transliteration": "jaato"
+      }
+    ],
+    "level": 2
+  },
+  {
+    "id": 12,
+    "english": "I read a book",
+    "marathi": [
+      {
+        "script": "मी",
+        "transliteration": "mee"
+      },
+      {
+        "script": "पुस्तक",
+        "transliteration": "pustak"
+      },
+      {
+        "script": "वाचतो",
+        "transliteration": "vachto"
+      }
+    ],
+    "level": 2
+  },
+  {
+    "id": 13,
+    "english": "My friend plays",
+    "marathi": [
+      {
+        "script": "माझा",
+        "transliteration": "maza"
+      },
+      {
+        "script": "मित्र",
+        "transliteration": "mitra"
+      },
+      {
+        "script": "खेळतो",
+        "transliteration": "khelto"
+      }
+    ],
+    "level": 2
+  },
+  {
+    "id": 14,
+    "english": "We work today",
+    "marathi": [
+      {
+        "script": "आम्ही",
+        "transliteration": "aamhi"
+      },
+      {
+        "script": "आज",
+        "transliteration": "aaj"
+      },
+      {
+        "script": "काम",
+        "transliteration": "kaam"
+      },
+      {
+        "script": "करतो",
+        "transliteration": "karto"
+      }
+    ],
+    "level": 2
+  },
+  {
+    "id": 15,
+    "english": "She writes a book",
+    "marathi": [
+      {
+        "script": "ती",
+        "transliteration": "tee"
+      },
+      {
+        "script": "पुस्तक",
+        "transliteration": "pustak"
+      },
+      {
+        "script": "लिहिते",
+        "transliteration": "lihite"
+      }
+    ],
+    "level": 2
+  },
+  {
+    "id": 16,
+    "english": "He runs fast",
+    "marathi": [
+      {
+        "script": "तो",
+        "transliteration": "to"
+      },
+      {
+        "script": "जलद",
+        "transliteration": "jalad"
+      },
+      {
+        "script": "धावतो",
+        "transliteration": "dhaavto"
+      }
+    ],
+    "level": 2
+  },
+  {
+    "id": 17,
+    "english": "I walk slowly",
+    "marathi": [
+      {
+        "script": "मी",
+        "transliteration": "mee"
+      },
+      {
+        "script": "हळू",
+        "transliteration": "halu"
+      },
+      {
+        "script": "चालतो",
+        "transliteration": "chaalto"
+      }
+    ],
+    "level": 2
+  },
+  {
+    "id": 18,
+    "english": "Today is a good day",
+    "marathi": [
+      {
+        "script": "आज",
+        "transliteration": "aaj"
+      },
+      {
+        "script": "चांगला",
+        "transliteration": "changla"
+      },
+      {
+        "script": "दिवस",
+        "transliteration": "divas"
+      },
+      {
+        "script": "आहे",
+        "transliteration": "aahe"
+      }
+    ],
+    "level": 2
+  },
+  {
+    "id": 19,
+    "english": "Tomorrow we play",
+    "marathi": [
+      {
+        "script": "उद्या",
+        "transliteration": "udya"
+      },
+      {
+        "script": "आम्ही",
+        "transliteration": "aamhi"
+      },
+      {
+        "script": "खेळतो",
+        "transliteration": "khelto"
+      }
+    ],
+    "level": 2
+  },
+  {
+    "id": 20,
+    "english": "Yesterday I was happy",
+    "marathi": [
+      {
+        "script": "काल",
+        "transliteration": "kaal"
+      },
+      {
+        "script": "मी",
+        "transliteration": "mee"
+      },
+      {
+        "script": "आनंदी",
+        "transliteration": "anandi"
+      },
+      {
+        "script": "होतो",
+        "transliteration": "hoto"
+      }
+    ],
+    "level": 2
+  },
+  {
+    "id": 21,
+    "english": "I go because I want to learn",
+    "marathi": [
+      {
+        "script": "मी",
+        "transliteration": "mee"
+      },
+      {
+        "script": "जातो",
+        "transliteration": "jaato"
+      },
+      {
+        "script": "कारण",
+        "transliteration": "karan"
+      },
+      {
+        "script": "मला",
+        "transliteration": "mala"
+      },
+      {
+        "script": "शिकायचे",
+        "transliteration": "shikayche"
+      },
+      {
+        "script": "आहे",
+        "transliteration": "aahe"
+      }
+    ],
+    "level": 3
+  },
+  {
+    "id": 22,
+    "english": "I am happy but tired",
+    "marathi": [
+      {
+        "script": "मी",
+        "transliteration": "mee"
+      },
+      {
+        "script": "आनंदी",
+        "transliteration": "anandi"
+      },
+      {
+        "script": "आहे",
+        "transliteration": "aahe"
+      },
+      {
+        "script": "पण",
+        "transliteration": "pan"
+      },
+      {
+        "script": "थकलो",
+        "transliteration": "thakalo"
+      }
+    ],
+    "level": 3
+  },
+  {
+    "id": 23,
+    "english": "If you go then I come",
+    "marathi": [
+      {
+        "script": "जर",
+        "transliteration": "jar"
+      },
+      {
+        "script": "तू",
+        "transliteration": "too"
+      },
+      {
+        "script": "जातोस",
+        "transliteration": "jaatos"
+      },
+      {
+        "script": "तर",
+        "transliteration": "tar"
+      },
+      {
+        "script": "मी",
+        "transliteration": "mee"
+      },
+      {
+        "script": "येतो",
+        "transliteration": "yeto"
+      }
+    ],
+    "level": 3
+  },
+  {
+    "id": 24,
+    "english": "I always read books",
+    "marathi": [
+      {
+        "script": "मी",
+        "transliteration": "mee"
+      },
+      {
+        "script": "नेहमी",
+        "transliteration": "nehmi"
+      },
+      {
+        "script": "पुस्तक",
+        "transliteration": "pustak"
+      },
+      {
+        "script": "वाचतो",
+        "transliteration": "vachto"
+      }
+    ],
+    "level": 3
+  },
+  {
+    "id": 25,
+    "english": "I sometimes play",
+    "marathi": [
+      {
+        "script": "मी",
+        "transliteration": "mee"
+      },
+      {
+        "script": "कधी",
+        "transliteration": "kadhi"
+      },
+      {
+        "script": "कधी",
+        "transliteration": "kadhi"
+      },
+      {
+        "script": "खेळतो",
+        "transliteration": "khelto"
+      }
+    ],
+    "level": 3
+  },
+  {
+    "id": 26,
+    "english": "I never eat bad food",
+    "marathi": [
+      {
+        "script": "मी",
+        "transliteration": "mee"
+      },
+      {
+        "script": "कधीच",
+        "transliteration": "kadhich"
+      },
+      {
+        "script": "वाईट",
+        "transliteration": "vaait"
+      },
+      {
+        "script": "अन्न",
+        "transliteration": "anna"
+      },
+      {
+        "script": "खातो",
+        "transliteration": "khato"
+      }
+    ],
+    "level": 3
+  },
+  {
+    "id": 27,
+    "english": "I think this is good",
+    "marathi": [
+      {
+        "script": "मी",
+        "transliteration": "mee"
+      },
+      {
+        "script": "विचार",
+        "transliteration": "vichar"
+      },
+      {
+        "script": "करतो",
+        "transliteration": "karto"
+      },
+      {
+        "script": "हे",
+        "transliteration": "he"
+      },
+      {
+        "script": "चांगले",
+        "transliteration": "changale"
+      },
+      {
+        "script": "आहे",
+        "transliteration": "aahe"
+      }
+    ],
+    "level": 3
+  },
+  {
+    "id": 28,
+    "english": "I understand this",
+    "marathi": [
+      {
+        "script": "मी",
+        "transliteration": "mee"
+      },
+      {
+        "script": "हे",
+        "transliteration": "he"
+      },
+      {
+        "script": "समजतो",
+        "transliteration": "samajto"
+      }
+    ],
+    "level": 3
+  },
+  {
+    "id": 29,
+    "english": "This is important",
+    "marathi": [
+      {
+        "script": "हे",
+        "transliteration": "he"
+      },
+      {
+        "script": "महत्त्वाचे",
+        "transliteration": "mahatvache"
+      },
+      {
+        "script": "आहे",
+        "transliteration": "aahe"
+      }
+    ],
+    "level": 3
+  },
+  {
+    "id": 30,
+    "english": "This is different",
+    "marathi": [
+      {
+        "script": "हे",
+        "transliteration": "he"
+      },
+      {
+        "script": "वेगळे",
+        "transliteration": "vegale"
+      },
+      {
+        "script": "आहे",
+        "transliteration": "aahe"
+      }
+    ],
+    "level": 3
+  },
+  {
+    "id": 31,
+    "english": "This is a difficult problem",
+    "marathi": [
+      {
+        "script": "ही",
+        "transliteration": "hee"
+      },
+      {
+        "script": "कठीण",
+        "transliteration": "kathin"
+      },
+      {
+        "script": "समस्या",
+        "transliteration": "samasya"
+      },
+      {
+        "script": "आहे",
+        "transliteration": "aahe"
+      }
+    ],
+    "level": 4
+  },
+  {
+    "id": 32,
+    "english": "I find a solution",
+    "marathi": [
+      {
+        "script": "मी",
+        "transliteration": "mee"
+      },
+      {
+        "script": "उपाय",
+        "transliteration": "upaay"
+      },
+      {
+        "script": "शोधतो",
+        "transliteration": "shodhato"
+      }
+    ],
+    "level": 4
+  },
+  {
+    "id": 33,
+    "english": "This decision is important",
+    "marathi": [
+      {
+        "script": "हा",
+        "transliteration": "haa"
+      },
+      {
+        "script": "निर्णय",
+        "transliteration": "nirnay"
+      },
+      {
+        "script": "महत्त्वाचा",
+        "transliteration": "mahatvacha"
+      },
+      {
+        "script": "आहे",
+        "transliteration": "aahe"
+      }
+    ],
+    "level": 4
+  },
+  {
+    "id": 34,
+    "english": "I learn from experience",
+    "marathi": [
+      {
+        "script": "मी",
+        "transliteration": "mee"
+      },
+      {
+        "script": "अनुभवातून",
+        "transliteration": "anubhavatoon"
+      },
+      {
+        "script": "शिकतो",
+        "transliteration": "shikto"
+      }
+    ],
+    "level": 4
+  },
+  {
+    "id": 35,
+    "english": "I want to improve",
+    "marathi": [
+      {
+        "script": "मला",
+        "transliteration": "mala"
+      },
+      {
+        "script": "सुधारायचे",
+        "transliteration": "sudharayche"
+      },
+      {
+        "script": "आहे",
+        "transliteration": "aahe"
+      }
+    ],
+    "level": 4
+  },
+  {
+    "id": 36,
+    "english": "We create something new",
+    "marathi": [
+      {
+        "script": "आम्ही",
+        "transliteration": "aamhi"
+      },
+      {
+        "script": "नवीन",
+        "transliteration": "naveen"
+      },
+      {
+        "script": "निर्माण",
+        "transliteration": "nirman"
+      },
+      {
+        "script": "करतो",
+        "transliteration": "karto"
+      }
+    ],
+    "level": 4
+  },
+  {
+    "id": 37,
+    "english": "We develop skills",
+    "marathi": [
+      {
+        "script": "आम्ही",
+        "transliteration": "aamhi"
+      },
+      {
+        "script": "कौशल्य",
+        "transliteration": "kaushalya"
+      },
+      {
+        "script": "विकास",
+        "transliteration": "vikas"
+      },
+      {
+        "script": "करतो",
+        "transliteration": "karto"
+      }
+    ],
+    "level": 4
+  },
+  {
+    "id": 38,
+    "english": "This is possible",
+    "marathi": [
+      {
+        "script": "हे",
+        "transliteration": "he"
+      },
+      {
+        "script": "शक्य",
+        "transliteration": "shakya"
+      },
+      {
+        "script": "आहे",
+        "transliteration": "aahe"
+      }
+    ],
+    "level": 4
+  },
+  {
+    "id": 39,
+    "english": "This is necessary",
+    "marathi": [
+      {
+        "script": "हे",
+        "transliteration": "he"
+      },
+      {
+        "script": "आवश्यक",
+        "transliteration": "aavashyak"
+      },
+      {
+        "script": "आहे",
+        "transliteration": "aahe"
+      }
+    ],
+    "level": 4
+  },
+  {
+    "id": 40,
+    "english": "This is very difficult",
+    "marathi": [
+      {
+        "script": "हे",
+        "transliteration": "he"
+      },
+      {
+        "script": "खूप",
+        "transliteration": "khoop"
+      },
+      {
+        "script": "कठीण",
+        "transliteration": "kathin"
+      },
+      {
+        "script": "आहे",
+        "transliteration": "aahe"
+      }
+    ],
+    "level": 4
   }
 ]
