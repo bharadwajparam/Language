@@ -1,0 +1,27 @@
+name: Manual Build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+      
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Build app
+        run: npm run dist
+      
+      - name: Upload Built App
+        uses: actions/upload-artifact@v4
+        with:
+          name: language-app-portable
+          path: dist/**/*.exe

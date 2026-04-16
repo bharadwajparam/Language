@@ -16,7 +16,7 @@
     },
     "win": {
       "target": [
-        "nsis"
+        "portable"
       ]
     }
   },
@@ -37,6 +37,7 @@
     "electron-packager": "^17.1.2"
   },
   "dependencies": {
-    "@google-cloud/text-to-speech": "^6.4.0"
+    "@google-cloud/text-to-speech": "^6.4.0",
+    "electron-updater": "^6.8.3"
   }
 }
