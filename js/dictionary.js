@@ -39,11 +39,15 @@ const Dictionary = {
 
     filterWords() {
         const term = document.getElementById('searchInput').value.toLowerCase();
+        // Support both string tiers and cached legacy numeric levels seamlessly
+        const weights = { "Beginner": 1, "Intermediate": 2, "Advanced": 3, 1: 1, 2: 2, 3: 3, 4: 3 };
+        
         const filtered = this.words.filter(item => {
             const textMatch = item.word.toLowerCase().includes(term) || 
                               item.marathi.script.includes(term) ||
                               item.marathi.transliteration.toLowerCase().includes(term);
-            const levelMatch = window.appState.currentLevel === 'All' || item.level === window.appState.currentLevel;
+            const levelMatch = window.appState.currentLevel === 'All' || 
+                               (weights[item.level] && weights[item.level] === weights[window.appState.currentLevel]);
             const categoryMatch = this.currentCategory === 'All' || item.category === this.currentCategory;
             return textMatch && levelMatch && categoryMatch;
         });

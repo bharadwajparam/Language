@@ -72,11 +72,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     window.SentenceGame.init(sentencesData);
     if (window.Profile) await window.Profile.init();
 
-    // Global Level Selector Binding
     const levelSelector = document.getElementById('global-level');
     levelSelector.addEventListener('change', (e) => {
         const val = e.target.value;
-        window.appState.currentLevel = val === 'All' ? 'All' : parseInt(val);
+        window.appState.currentLevel = val;
         window.Dictionary.filterWords();
         window.SentenceGame.loadNextSentence();
     });

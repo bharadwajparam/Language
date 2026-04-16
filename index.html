@@ -71,11 +71,14 @@
                 <button id="nav-sentence"
                     class="nav-btn text-textSecondary font-medium hover:text-white transition">Sentence Builder</button>
                 <button id="nav-profile"
-                    class="nav-btn text-textSecondary font-medium hover:text-white transition">Learner Dashboard</button>
+                    class="nav-btn text-textSecondary font-medium hover:text-white transition">Learner
+                    Dashboard</button>
             </nav>
 
-            <div class="flex items-center gap-3 cursor-pointer group" id="header-profile-container" title="Manage Profiles">
-                <span id="active-profile-name" class="text-sm font-medium text-textSecondary group-hover:text-white transition"></span>
+            <div class="flex items-center gap-3 cursor-pointer group" id="header-profile-container"
+                title="Manage Profiles">
+                <span id="active-profile-name"
+                    class="text-sm font-medium text-textSecondary group-hover:text-white transition"></span>
                 <button class="text-textSecondary group-hover:text-primary transition flex items-center"
                     id="header-profile-btn">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="flex-shrink-0"
@@ -168,17 +171,9 @@
                             <select id="global-level"
                                 class="w-full bg-surface text-white text-sm border border-borderDark rounded-md px-3 py-2.5 focus:outline-none focus:border-borderDark appearance-none cursor-pointer">
                                 <option value="All">All Levels</option>
-                                <option value="1">Level 1 - Beginner</option>
-                                <option value="2">Level 2</option>
-                                <option value="3">Level 3</option>
-                                <option value="4">Level 4</option>
-                                <option value="5">Level 5</option>
-                                <option value="6">Level 6</option>
-                                <option value="7">Level 7</option>
-                                <option value="8">Level 8</option>
-                                <option value="9">Level 9</option>
-                                <option value="10">Level 10</option>
-                                <option value="11">Level 11 - Master</option>
+                                <option value="Beginner">Beginner</option>
+                                <option value="Intermediate">Intermediate</option>
+                                <option value="Advanced">Advanced</option>
                             </select>
                             <div
                                 class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-textSecondary">
@@ -258,7 +253,7 @@
                         class="bg-background flex flex-col justify-center relative border border-borderDark rounded-xl p-8 mb-8 text-center shadow-inner min-h-[140px]">
                         <span
                             class="text-[10px] font-bold uppercase text-textSecondary tracking-widest absolute top-4 left-6">Translate
-                            to English</span>
+                            to Marathi</span>
                         <button id="listen-btn"
                             class="absolute top-4 right-6 text-xs font-semibold bg-surface border border-borderDark text-textPrimary hover:text-white px-3 py-1.5 rounded-md hover:bg-highlight transition flex items-center gap-2"
                             title="Listen">
@@ -365,15 +360,20 @@
             <div class="max-w-xl mx-auto w-full">
                 <h2 class="text-3xl font-semibold text-white mb-2 tracking-tight">Manage Profiles</h2>
                 <p class="text-textSecondary mb-8 text-sm">Switch, create, or drop learning profiles.</p>
-                
-                <div class="bg-surface rounded-xl border border-borderDark p-8 shadow-2xl relative overflow-hidden flex flex-col gap-6">
+
+                <div
+                    class="bg-surface rounded-xl border border-borderDark p-8 shadow-2xl relative overflow-hidden flex flex-col gap-6">
                     <div>
                         <label class="block text-sm font-medium text-textSecondary mb-2">Active Profile</label>
                         <div class="relative">
                             <select id="profile-selector"
-                                    class="w-full px-4 py-3 bg-background border border-borderDark rounded-md focus:outline-none focus:border-borderDark text-white text-base font-medium cursor-pointer shadow-sm appearance-none relative"></select>
-                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-textSecondary">
-                                <svg class="fill-current h-4 w-4" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+                                class="w-full px-4 py-3 bg-background border border-borderDark rounded-md focus:outline-none focus:border-borderDark text-white text-base font-medium cursor-pointer shadow-sm appearance-none relative"></select>
+                            <div
+                                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-textSecondary">
+                                <svg class="fill-current h-4 w-4" viewBox="0 0 20 20">
+                                    <path
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+                                </svg>
                             </div>
                         </div>
                     </div>
@@ -383,7 +383,8 @@
                             class="flex-1 px-4 py-3 bg-primary text-[#121212] rounded-md font-semibold shadow-lg shadow-primary/20 hover:bg-green-400 transition transform hover:-translate-y-0.5 text-center">Add
                             New Profile</button>
                         <button id="delete-profile-btn"
-                            class="px-4 py-3 bg-red-500/10 border border-red-500/30 text-rose-500 hover:bg-rose-600 hover:text-white rounded-md font-medium transition text-center hidden">Delete Active</button>
+                            class="px-4 py-3 bg-red-500/10 border border-red-500/30 text-rose-500 hover:bg-rose-600 hover:text-white rounded-md font-medium transition text-center hidden">Delete
+                            Active</button>
                     </div>
                 </div>
             </div>
@@ -393,7 +394,7 @@
 
     <!-- Footer -->
     <footer class="border-t border-borderDark text-textSecondary text-xs text-center py-6 mt-12 bg-background/50">
-        <p>© 2026 LanguageAura. Minimalist dark aesthetic.</p>
+        <p>© 2026 ChatPat.</p>
     </footer>
 
     <!-- New Profile Modal -->

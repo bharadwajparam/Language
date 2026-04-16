@@ -16,7 +16,7 @@
         "transliteration": "pito"
       }
     ],
-    "level": 1
+    "level": "Beginner"
   },
   {
     "id": 2,
@@ -35,7 +35,7 @@
         "transliteration": "khato"
       }
     ],
-    "level": 1
+    "level": "Beginner"
   },
   {
     "id": 3,
@@ -54,7 +54,7 @@
         "transliteration": "jaato"
       }
     ],
-    "level": 1
+    "level": "Beginner"
   },
   {
     "id": 4,
@@ -73,7 +73,7 @@
         "transliteration": "pite"
       }
     ],
-    "level": 1
+    "level": "Beginner"
   },
   {
     "id": 5,
@@ -92,7 +92,7 @@
         "transliteration": "paahato"
       }
     ],
-    "level": 1
+    "level": "Beginner"
   },
   {
     "id": 6,
@@ -111,7 +111,7 @@
         "transliteration": "bolto"
       }
     ],
-    "level": 1
+    "level": "Beginner"
   },
   {
     "id": 7,
@@ -130,7 +130,7 @@
         "transliteration": "aahe"
       }
     ],
-    "level": 1
+    "level": "Beginner"
   },
   {
     "id": 8,
@@ -149,7 +149,7 @@
         "transliteration": "aahe"
       }
     ],
-    "level": 1
+    "level": "Beginner"
   },
   {
     "id": 9,
@@ -168,7 +168,7 @@
         "transliteration": "khato"
       }
     ],
-    "level": 1
+    "level": "Beginner"
   },
   {
     "id": 10,
@@ -187,7 +187,7 @@
         "transliteration": "pito"
       }
     ],
-    "level": 1
+    "level": "Beginner"
   },
   {
     "id": 11,
@@ -206,7 +206,7 @@
         "transliteration": "jaato"
       }
     ],
-    "level": 2
+    "level": "Intermediate"
   },
   {
     "id": 12,
@@ -225,7 +225,7 @@
         "transliteration": "vachto"
       }
     ],
-    "level": 2
+    "level": "Intermediate"
   },
   {
     "id": 13,
@@ -244,7 +244,7 @@
         "transliteration": "khelto"
       }
     ],
-    "level": 2
+    "level": "Intermediate"
   },
   {
     "id": 14,
@@ -267,7 +267,7 @@
         "transliteration": "karto"
       }
     ],
-    "level": 2
+    "level": "Intermediate"
   },
   {
     "id": 15,
@@ -286,7 +286,7 @@
         "transliteration": "lihite"
       }
     ],
-    "level": 2
+    "level": "Intermediate"
   },
   {
     "id": 16,
@@ -305,7 +305,7 @@
         "transliteration": "dhaavto"
       }
     ],
-    "level": 2
+    "level": "Intermediate"
   },
   {
     "id": 17,
@@ -324,7 +324,7 @@
         "transliteration": "chaalto"
       }
     ],
-    "level": 2
+    "level": "Intermediate"
   },
   {
     "id": 18,
@@ -347,7 +347,7 @@
         "transliteration": "aahe"
       }
     ],
-    "level": 2
+    "level": "Intermediate"
   },
   {
     "id": 19,
@@ -366,7 +366,7 @@
         "transliteration": "khelto"
       }
     ],
-    "level": 2
+    "level": "Intermediate"
   },
   {
     "id": 20,
@@ -389,7 +389,7 @@
         "transliteration": "hoto"
       }
     ],
-    "level": 2
+    "level": "Intermediate"
   },
   {
     "id": 21,
@@ -420,7 +420,7 @@
         "transliteration": "aahe"
       }
     ],
-    "level": 3
+    "level": "Advanced"
   },
   {
     "id": 22,
@@ -447,7 +447,7 @@
         "transliteration": "thakalo"
       }
     ],
-    "level": 3
+    "level": "Advanced"
   },
   {
     "id": 23,
@@ -478,7 +478,7 @@
         "transliteration": "yeto"
       }
     ],
-    "level": 3
+    "level": "Advanced"
   },
   {
     "id": 24,
@@ -501,7 +501,7 @@
         "transliteration": "vachto"
       }
     ],
-    "level": 3
+    "level": "Advanced"
   },
   {
     "id": 25,
@@ -524,7 +524,7 @@
         "transliteration": "khelto"
       }
     ],
-    "level": 3
+    "level": "Advanced"
   },
   {
     "id": 26,
@@ -551,7 +551,7 @@
         "transliteration": "khato"
       }
     ],
-    "level": 3
+    "level": "Advanced"
   },
   {
     "id": 27,
@@ -582,7 +582,7 @@
         "transliteration": "aahe"
       }
     ],
-    "level": 3
+    "level": "Advanced"
   },
   {
     "id": 28,
@@ -601,7 +601,7 @@
         "transliteration": "samajto"
       }
     ],
-    "level": 3
+    "level": "Advanced"
   },
   {
     "id": 29,
@@ -620,7 +620,7 @@
         "transliteration": "aahe"
       }
     ],
-    "level": 3
+    "level": "Advanced"
   },
   {
     "id": 30,
@@ -639,7 +639,7 @@
         "transliteration": "aahe"
       }
     ],
-    "level": 3
+    "level": "Advanced"
   },
   {
     "id": 31,
@@ -662,7 +662,7 @@
         "transliteration": "aahe"
       }
     ],
-    "level": 4
+    "level": "Advanced"
   },
   {
     "id": 32,
@@ -681,7 +681,7 @@
         "transliteration": "shodhato"
       }
     ],
-    "level": 4
+    "level": "Advanced"
   },
   {
     "id": 33,
@@ -704,7 +704,7 @@
         "transliteration": "aahe"
       }
     ],
-    "level": 4
+    "level": "Advanced"
   },
   {
     "id": 34,
@@ -723,7 +723,7 @@
         "transliteration": "shikto"
       }
     ],
-    "level": 4
+    "level": "Advanced"
   },
   {
     "id": 35,
@@ -742,7 +742,7 @@
         "transliteration": "aahe"
       }
     ],
-    "level": 4
+    "level": "Advanced"
   },
   {
     "id": 36,
@@ -765,7 +765,7 @@
         "transliteration": "karto"
       }
     ],
-    "level": 4
+    "level": "Advanced"
   },
   {
     "id": 37,
@@ -788,7 +788,7 @@
         "transliteration": "karto"
       }
     ],
-    "level": 4
+    "level": "Advanced"
   },
   {
     "id": 38,
@@ -807,7 +807,7 @@
         "transliteration": "aahe"
       }
     ],
-    "level": 4
+    "level": "Advanced"
   },
   {
     "id": 39,
@@ -826,7 +826,7 @@
         "transliteration": "aahe"
       }
     ],
-    "level": 4
+    "level": "Advanced"
   },
   {
     "id": 40,
@@ -849,6 +849,6 @@
         "transliteration": "aahe"
       }
     ],
-    "level": 4
+    "level": "Advanced"
   }
 ]

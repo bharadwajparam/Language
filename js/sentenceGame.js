@@ -88,14 +88,14 @@ const SentenceGame = {
     loadNextSentence() {
         if (!this.allSentences || this.allSentences.length === 0) return;
         
+        // Support both string classifications and browser-cached legacy integer levels
+        const weights = { "Beginner": 1, "Intermediate": 2, "Advanced": 3, 1: 1, 2: 2, 3: 3, 4: 3 };
         let pool;
         if (window.appState.currentLevel === 'All') {
             pool = this.allSentences;
         } else {
-            pool = this.allSentences.filter(s => s.level === window.appState.currentLevel);
-            if (pool.length === 0) {
-                pool = this.allSentences.filter(s => s.level <= window.appState.currentLevel);
-            }
+            // Include sentences up to the current difficulty level using weight scale
+            pool = this.allSentences.filter(s => weights[s.level] <= weights[window.appState.currentLevel]);
         }
         if (!pool || pool.length === 0) pool = this.allSentences; // Absolute fallback
         

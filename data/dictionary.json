@@ -1,73 +1,641 @@
 [
-  {"word":"water","category":"Noun","marathi":{"script":"पाणी","transliteration":"paani"},"level":1},
-  {"word":"food","category":"Noun","marathi":{"script":"अन्न","transliteration":"anna"},"level":1},
-  {"word":"house","category":"Noun","marathi":{"script":"घर","transliteration":"ghar"},"level":1},
-  {"word":"man","category":"Noun","marathi":{"script":"माणूस","transliteration":"maanus"},"level":1},
-  {"word":"woman","category":"Noun","marathi":{"script":"स्त्री","transliteration":"stree"},"level":1},
-  {"word":"child","category":"Noun","marathi":{"script":"मुल","transliteration":"mul"},"level":1},
-  {"word":"I","category":"Pronoun","marathi":{"script":"मी","transliteration":"mee"},"level":1},
-  {"word":"you","category":"Pronoun","marathi":{"script":"तू","transliteration":"too"},"level":1},
-  {"word":"he","category":"Pronoun","marathi":{"script":"तो","transliteration":"to"},"level":1},
-  {"word":"she","category":"Pronoun","marathi":{"script":"ती","transliteration":"tee"},"level":1},
-  {"word":"we","category":"Pronoun","marathi":{"script":"आम्ही","transliteration":"aamhi"},"level":1},
-  {"word":"this","category":"Pronoun","marathi":{"script":"हे","transliteration":"he"},"level":1},
-  {"word":"that","category":"Pronoun","marathi":{"script":"ते","transliteration":"te"},"level":1},
-  {"word":"eat","category":"Verb","marathi":{"script":"खाणे","transliteration":"khane"},"level":1},
-  {"word":"drink","category":"Verb","marathi":{"script":"पिणे","transliteration":"pine"},"level":1},
-  {"word":"go","category":"Verb","marathi":{"script":"जाणे","transliteration":"jaane"},"level":1},
-  {"word":"come","category":"Verb","marathi":{"script":"येणे","transliteration":"yene"},"level":1},
-  {"word":"see","category":"Verb","marathi":{"script":"पाहणे","transliteration":"pahane"},"level":1},
-  {"word":"speak","category":"Verb","marathi":{"script":"बोलणे","transliteration":"bolane"},"level":1},
-  {"word":"do","category":"Verb","marathi":{"script":"करणे","transliteration":"karane"},"level":1},
-  {"word":"big","category":"Adjective","marathi":{"script":"मोठा","transliteration":"motha"},"level":1},
-  {"word":"small","category":"Adjective","marathi":{"script":"लहान","transliteration":"lahan"},"level":1},
-  {"word":"good","category":"Adjective","marathi":{"script":"चांगला","transliteration":"changla"},"level":1},
-  {"word":"bad","category":"Adjective","marathi":{"script":"वाईट","transliteration":"vaait"},"level":1},
-  {"word":"yes","category":"Other","marathi":{"script":"हो","transliteration":"ho"},"level":1},
-  {"word":"no","category":"Other","marathi":{"script":"नाही","transliteration":"naahi"},"level":1},
-  {"word":"school","category":"Noun","marathi":{"script":"शाळा","transliteration":"shaala"},"level":2},
-  {"word":"book","category":"Noun","marathi":{"script":"पुस्तक","transliteration":"pustak"},"level":2},
-  {"word":"friend","category":"Noun","marathi":{"script":"मित्र","transliteration":"mitra"},"level":2},
-  {"word":"family","category":"Noun","marathi":{"script":"कुटुंब","transliteration":"kutumb"},"level":2},
-  {"word":"time","category":"Noun","marathi":{"script":"वेळ","transliteration":"vel"},"level":2},
-  {"word":"day","category":"Noun","marathi":{"script":"दिवस","transliteration":"divas"},"level":2},
-  {"word":"today","category":"Noun","marathi":{"script":"आज","transliteration":"aaj"},"level":2},
-  {"word":"tomorrow","category":"Noun","marathi":{"script":"उद्या","transliteration":"udya"},"level":2},
-  {"word":"yesterday","category":"Noun","marathi":{"script":"काल","transliteration":"kaal"},"level":2},
-  {"word":"work","category":"Noun","marathi":{"script":"काम","transliteration":"kaam"},"level":2},
-  {"word":"play","category":"Verb","marathi":{"script":"खेळणे","transliteration":"khelane"},"level":2},
-  {"word":"read","category":"Verb","marathi":{"script":"वाचणे","transliteration":"vachane"},"level":2},
-  {"word":"write","category":"Verb","marathi":{"script":"लिहिणे","transliteration":"lihine"},"level":2},
-  {"word":"run","category":"Verb","marathi":{"script":"धावणे","transliteration":"dhaavane"},"level":2},
-  {"word":"walk","category":"Verb","marathi":{"script":"चालणे","transliteration":"chalane"},"level":2},
-  {"word":"happy","category":"Adjective","marathi":{"script":"आनंदी","transliteration":"anandi"},"level":2},
-  {"word":"sad","category":"Adjective","marathi":{"script":"दुःखी","transliteration":"dukhi"},"level":2},
-  {"word":"fast","category":"Adjective","marathi":{"script":"जलद","transliteration":"jalad"},"level":2},
-  {"word":"slow","category":"Adjective","marathi":{"script":"हळू","transliteration":"halu"},"level":2},
-  {"word":"new","category":"Adjective","marathi":{"script":"नवीन","transliteration":"naveen"},"level":2},
-  {"word":"because","category":"Connector","marathi":{"script":"कारण","transliteration":"karan"},"level":3},
-  {"word":"but","category":"Connector","marathi":{"script":"पण","transliteration":"pan"},"level":3},
-  {"word":"and","category":"Connector","marathi":{"script":"आणि","transliteration":"aani"},"level":3},
-  {"word":"if","category":"Connector","marathi":{"script":"जर","transliteration":"jar"},"level":3},
-  {"word":"then","category":"Connector","marathi":{"script":"तर","transliteration":"tar"},"level":3},
-  {"word":"before","category":"Other","marathi":{"script":"आधी","transliteration":"aadhi"},"level":3},
-  {"word":"after","category":"Other","marathi":{"script":"नंतर","transliteration":"nantar"},"level":3},
-  {"word":"always","category":"Other","marathi":{"script":"नेहमी","transliteration":"nehmi"},"level":3},
-  {"word":"sometimes","category":"Other","marathi":{"script":"कधी कधी","transliteration":"kadhi kadhi"},"level":3},
-  {"word":"never","category":"Other","marathi":{"script":"कधीच नाही","transliteration":"kadhich nahi"},"level":3},
-  {"word":"think","category":"Verb","marathi":{"script":"विचार करणे","transliteration":"vichar karane"},"level":3},
-  {"word":"know","category":"Verb","marathi":{"script":"माहित असणे","transliteration":"mahiti asane"},"level":3},
-  {"word":"understand","category":"Verb","marathi":{"script":"समजणे","transliteration":"samajane"},"level":3},
-  {"word":"important","category":"Adjective","marathi":{"script":"महत्त्वाचे","transliteration":"mahatvache"},"level":3},
-  {"word":"different","category":"Adjective","marathi":{"script":"वेगळे","transliteration":"vegale"},"level":3},
-  {"word":"experience","category":"Noun","marathi":{"script":"अनुभव","transliteration":"anubhav"},"level":4},
-  {"word":"decision","category":"Noun","marathi":{"script":"निर्णय","transliteration":"nirnay"},"level":4},
-  {"word":"problem","category":"Noun","marathi":{"script":"समस्या","transliteration":"samasya"},"level":4},
-  {"word":"solution","category":"Noun","marathi":{"script":"उपाय","transliteration":"upaay"},"level":4},
-  {"word":"improve","category":"Verb","marathi":{"script":"सुधारणे","transliteration":"sudharane"},"level":4},
-  {"word":"create","category":"Verb","marathi":{"script":"निर्माण करणे","transliteration":"nirman karane"},"level":4},
-  {"word":"develop","category":"Verb","marathi":{"script":"विकास करणे","transliteration":"vikas karane"},"level":4},
-  {"word":"possible","category":"Adjective","marathi":{"script":"शक्य","transliteration":"shakya"},"level":4},
-  {"word":"necessary","category":"Adjective","marathi":{"script":"आवश्यक","transliteration":"aavashyak"},"level":4},
-  {"word":"difficult","category":"Adjective","marathi":{"script":"कठीण","transliteration":"kathin"},"level":4}
+  {
+    "word": "water",
+    "category": "Noun",
+    "marathi": {
+      "script": "पाणी",
+      "transliteration": "paani"
+    },
+    "level": "Beginner"
+  },
+  {
+    "word": "food",
+    "category": "Noun",
+    "marathi": {
+      "script": "अन्न",
+      "transliteration": "anna"
+    },
+    "level": "Beginner"
+  },
+  {
+    "word": "house",
+    "category": "Noun",
+    "marathi": {
+      "script": "घर",
+      "transliteration": "ghar"
+    },
+    "level": "Beginner"
+  },
+  {
+    "word": "man",
+    "category": "Noun",
+    "marathi": {
+      "script": "माणूस",
+      "transliteration": "maanus"
+    },
+    "level": "Beginner"
+  },
+  {
+    "word": "woman",
+    "category": "Noun",
+    "marathi": {
+      "script": "स्त्री",
+      "transliteration": "stree"
+    },
+    "level": "Beginner"
+  },
+  {
+    "word": "child",
+    "category": "Noun",
+    "marathi": {
+      "script": "मुल",
+      "transliteration": "mul"
+    },
+    "level": "Beginner"
+  },
+  {
+    "word": "I",
+    "category": "Pronoun",
+    "marathi": {
+      "script": "मी",
+      "transliteration": "mee"
+    },
+    "level": "Beginner"
+  },
+  {
+    "word": "you",
+    "category": "Pronoun",
+    "marathi": {
+      "script": "तू",
+      "transliteration": "too"
+    },
+    "level": "Beginner"
+  },
+  {
+    "word": "he",
+    "category": "Pronoun",
+    "marathi": {
+      "script": "तो",
+      "transliteration": "to"
+    },
+    "level": "Beginner"
+  },
+  {
+    "word": "she",
+    "category": "Pronoun",
+    "marathi": {
+      "script": "ती",
+      "transliteration": "tee"
+    },
+    "level": "Beginner"
+  },
+  {
+    "word": "we",
+    "category": "Pronoun",
+    "marathi": {
+      "script": "आम्ही",
+      "transliteration": "aamhi"
+    },
+    "level": "Beginner"
+  },
+  {
+    "word": "this",
+    "category": "Pronoun",
+    "marathi": {
+      "script": "हे",
+      "transliteration": "he"
+    },
+    "level": "Beginner"
+  },
+  {
+    "word": "that",
+    "category": "Pronoun",
+    "marathi": {
+      "script": "ते",
+      "transliteration": "te"
+    },
+    "level": "Beginner"
+  },
+  {
+    "word": "eat",
+    "category": "Verb",
+    "marathi": {
+      "script": "खाणे",
+      "transliteration": "khane"
+    },
+    "level": "Beginner"
+  },
+  {
+    "word": "drink",
+    "category": "Verb",
+    "marathi": {
+      "script": "पिणे",
+      "transliteration": "pine"
+    },
+    "level": "Beginner"
+  },
+  {
+    "word": "go",
+    "category": "Verb",
+    "marathi": {
+      "script": "जाणे",
+      "transliteration": "jaane"
+    },
+    "level": "Beginner"
+  },
+  {
+    "word": "come",
+    "category": "Verb",
+    "marathi": {
+      "script": "येणे",
+      "transliteration": "yene"
+    },
+    "level": "Beginner"
+  },
+  {
+    "word": "see",
+    "category": "Verb",
+    "marathi": {
+      "script": "पाहणे",
+      "transliteration": "pahane"
+    },
+    "level": "Beginner"
+  },
+  {
+    "word": "speak",
+    "category": "Verb",
+    "marathi": {
+      "script": "बोलणे",
+      "transliteration": "bolane"
+    },
+    "level": "Beginner"
+  },
+  {
+    "word": "do",
+    "category": "Verb",
+    "marathi": {
+      "script": "करणे",
+      "transliteration": "karane"
+    },
+    "level": "Beginner"
+  },
+  {
+    "word": "big",
+    "category": "Adjective",
+    "marathi": {
+      "script": "मोठा",
+      "transliteration": "motha"
+    },
+    "level": "Beginner"
+  },
+  {
+    "word": "small",
+    "category": "Adjective",
+    "marathi": {
+      "script": "लहान",
+      "transliteration": "lahan"
+    },
+    "level": "Beginner"
+  },
+  {
+    "word": "good",
+    "category": "Adjective",
+    "marathi": {
+      "script": "चांगला",
+      "transliteration": "changla"
+    },
+    "level": "Beginner"
+  },
+  {
+    "word": "bad",
+    "category": "Adjective",
+    "marathi": {
+      "script": "वाईट",
+      "transliteration": "vaait"
+    },
+    "level": "Beginner"
+  },
+  {
+    "word": "yes",
+    "category": "Other",
+    "marathi": {
+      "script": "हो",
+      "transliteration": "ho"
+    },
+    "level": "Beginner"
+  },
+  {
+    "word": "no",
+    "category": "Other",
+    "marathi": {
+      "script": "नाही",
+      "transliteration": "naahi"
+    },
+    "level": "Beginner"
+  },
+  {
+    "word": "school",
+    "category": "Noun",
+    "marathi": {
+      "script": "शाळा",
+      "transliteration": "shaala"
+    },
+    "level": "Intermediate"
+  },
+  {
+    "word": "book",
+    "category": "Noun",
+    "marathi": {
+      "script": "पुस्तक",
+      "transliteration": "pustak"
+    },
+    "level": "Intermediate"
+  },
+  {
+    "word": "friend",
+    "category": "Noun",
+    "marathi": {
+      "script": "मित्र",
+      "transliteration": "mitra"
+    },
+    "level": "Intermediate"
+  },
+  {
+    "word": "family",
+    "category": "Noun",
+    "marathi": {
+      "script": "कुटुंब",
+      "transliteration": "kutumb"
+    },
+    "level": "Intermediate"
+  },
+  {
+    "word": "time",
+    "category": "Noun",
+    "marathi": {
+      "script": "वेळ",
+      "transliteration": "vel"
+    },
+    "level": "Intermediate"
+  },
+  {
+    "word": "day",
+    "category": "Noun",
+    "marathi": {
+      "script": "दिवस",
+      "transliteration": "divas"
+    },
+    "level": "Intermediate"
+  },
+  {
+    "word": "today",
+    "category": "Noun",
+    "marathi": {
+      "script": "आज",
+      "transliteration": "aaj"
+    },
+    "level": "Intermediate"
+  },
+  {
+    "word": "tomorrow",
+    "category": "Noun",
+    "marathi": {
+      "script": "उद्या",
+      "transliteration": "udya"
+    },
+    "level": "Intermediate"
+  },
+  {
+    "word": "yesterday",
+    "category": "Noun",
+    "marathi": {
+      "script": "काल",
+      "transliteration": "kaal"
+    },
+    "level": "Intermediate"
+  },
+  {
+    "word": "work",
+    "category": "Noun",
+    "marathi": {
+      "script": "काम",
+      "transliteration": "kaam"
+    },
+    "level": "Intermediate"
+  },
+  {
+    "word": "play",
+    "category": "Verb",
+    "marathi": {
+      "script": "खेळणे",
+      "transliteration": "khelane"
+    },
+    "level": "Intermediate"
+  },
+  {
+    "word": "read",
+    "category": "Verb",
+    "marathi": {
+      "script": "वाचणे",
+      "transliteration": "vachane"
+    },
+    "level": "Intermediate"
+  },
+  {
+    "word": "write",
+    "category": "Verb",
+    "marathi": {
+      "script": "लिहिणे",
+      "transliteration": "lihine"
+    },
+    "level": "Intermediate"
+  },
+  {
+    "word": "run",
+    "category": "Verb",
+    "marathi": {
+      "script": "धावणे",
+      "transliteration": "dhaavane"
+    },
+    "level": "Intermediate"
+  },
+  {
+    "word": "walk",
+    "category": "Verb",
+    "marathi": {
+      "script": "चालणे",
+      "transliteration": "chalane"
+    },
+    "level": "Intermediate"
+  },
+  {
+    "word": "happy",
+    "category": "Adjective",
+    "marathi": {
+      "script": "आनंदी",
+      "transliteration": "anandi"
+    },
+    "level": "Intermediate"
+  },
+  {
+    "word": "sad",
+    "category": "Adjective",
+    "marathi": {
+      "script": "दुःखी",
+      "transliteration": "dukhi"
+    },
+    "level": "Intermediate"
+  },
+  {
+    "word": "fast",
+    "category": "Adjective",
+    "marathi": {
+      "script": "जलद",
+      "transliteration": "jalad"
+    },
+    "level": "Intermediate"
+  },
+  {
+    "word": "slow",
+    "category": "Adjective",
+    "marathi": {
+      "script": "हळू",
+      "transliteration": "halu"
+    },
+    "level": "Intermediate"
+  },
+  {
+    "word": "new",
+    "category": "Adjective",
+    "marathi": {
+      "script": "नवीन",
+      "transliteration": "naveen"
+    },
+    "level": "Intermediate"
+  },
+  {
+    "word": "because",
+    "category": "Connector",
+    "marathi": {
+      "script": "कारण",
+      "transliteration": "karan"
+    },
+    "level": "Advanced"
+  },
+  {
+    "word": "but",
+    "category": "Connector",
+    "marathi": {
+      "script": "पण",
+      "transliteration": "pan"
+    },
+    "level": "Advanced"
+  },
+  {
+    "word": "and",
+    "category": "Connector",
+    "marathi": {
+      "script": "आणि",
+      "transliteration": "aani"
+    },
+    "level": "Advanced"
+  },
+  {
+    "word": "if",
+    "category": "Connector",
+    "marathi": {
+      "script": "जर",
+      "transliteration": "jar"
+    },
+    "level": "Advanced"
+  },
+  {
+    "word": "then",
+    "category": "Connector",
+    "marathi": {
+      "script": "तर",
+      "transliteration": "tar"
+    },
+    "level": "Advanced"
+  },
+  {
+    "word": "before",
+    "category": "Other",
+    "marathi": {
+      "script": "आधी",
+      "transliteration": "aadhi"
+    },
+    "level": "Advanced"
+  },
+  {
+    "word": "after",
+    "category": "Other",
+    "marathi": {
+      "script": "नंतर",
+      "transliteration": "nantar"
+    },
+    "level": "Advanced"
+  },
+  {
+    "word": "always",
+    "category": "Other",
+    "marathi": {
+      "script": "नेहमी",
+      "transliteration": "nehmi"
+    },
+    "level": "Advanced"
+  },
+  {
+    "word": "sometimes",
+    "category": "Other",
+    "marathi": {
+      "script": "कधी कधी",
+      "transliteration": "kadhi kadhi"
+    },
+    "level": "Advanced"
+  },
+  {
+    "word": "never",
+    "category": "Other",
+    "marathi": {
+      "script": "कधीच नाही",
+      "transliteration": "kadhich nahi"
+    },
+    "level": "Advanced"
+  },
+  {
+    "word": "think",
+    "category": "Verb",
+    "marathi": {
+      "script": "विचार करणे",
+      "transliteration": "vichar karane"
+    },
+    "level": "Advanced"
+  },
+  {
+    "word": "know",
+    "category": "Verb",
+    "marathi": {
+      "script": "माहित असणे",
+      "transliteration": "mahiti asane"
+    },
+    "level": "Advanced"
+  },
+  {
+    "word": "understand",
+    "category": "Verb",
+    "marathi": {
+      "script": "समजणे",
+      "transliteration": "samajane"
+    },
+    "level": "Advanced"
+  },
+  {
+    "word": "important",
+    "category": "Adjective",
+    "marathi": {
+      "script": "महत्त्वाचे",
+      "transliteration": "mahatvache"
+    },
+    "level": "Advanced"
+  },
+  {
+    "word": "different",
+    "category": "Adjective",
+    "marathi": {
+      "script": "वेगळे",
+      "transliteration": "vegale"
+    },
+    "level": "Advanced"
+  },
+  {
+    "word": "experience",
+    "category": "Noun",
+    "marathi": {
+      "script": "अनुभव",
+      "transliteration": "anubhav"
+    },
+    "level": "Advanced"
+  },
+  {
+    "word": "decision",
+    "category": "Noun",
+    "marathi": {
+      "script": "निर्णय",
+      "transliteration": "nirnay"
+    },
+    "level": "Advanced"
+  },
+  {
+    "word": "problem",
+    "category": "Noun",
+    "marathi": {
+      "script": "समस्या",
+      "transliteration": "samasya"
+    },
+    "level": "Advanced"
+  },
+  {
+    "word": "solution",
+    "category": "Noun",
+    "marathi": {
+      "script": "उपाय",
+      "transliteration": "upaay"
+    },
+    "level": "Advanced"
+  },
+  {
+    "word": "improve",
+    "category": "Verb",
+    "marathi": {
+      "script": "सुधारणे",
+      "transliteration": "sudharane"
+    },
+    "level": "Advanced"
+  },
+  {
+    "word": "create",
+    "category": "Verb",
+    "marathi": {
+      "script": "निर्माण करणे",
+      "transliteration": "nirman karane"
+    },
+    "level": "Advanced"
+  },
+  {
+    "word": "develop",
+    "category": "Verb",
+    "marathi": {
+      "script": "विकास करणे",
+      "transliteration": "vikas karane"
+    },
+    "level": "Advanced"
+  },
+  {
+    "word": "possible",
+    "category": "Adjective",
+    "marathi": {
+      "script": "शक्य",
+      "transliteration": "shakya"
+    },
+    "level": "Advanced"
+  },
+  {
+    "word": "necessary",
+    "category": "Adjective",
+    "marathi": {
+      "script": "आवश्यक",
+      "transliteration": "aavashyak"
+    },
+    "level": "Advanced"
+  },
+  {
+    "word": "difficult",
+    "category": "Adjective",
+    "marathi": {
+      "script": "कठीण",
+      "transliteration": "kathin"
+    },
+    "level": "Advanced"
+  }
 ]
