@@ -16,6 +16,8 @@ const Dictionary = {
         if (wordsToRender.length === 0) {
             grid.innerHTML = '<div class="text-center text-textSecondary col-span-full py-10">No words found.</div>';
             return;
+        }
+
         wordsToRender.forEach(item => {
             const card = document.createElement('div');
             const emoji = item.emoji || item.word.charAt(0).toUpperCase();
