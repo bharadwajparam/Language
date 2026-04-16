@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn Marathi - Language App</title>
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -20,177 +21,350 @@
                         sans: ['Inter', 'sans-serif'],
                     },
                     colors: {
-                        primary: '#4f46e5',
-                        secondary: '#ec4899',
-                        dark: '#0f172a',
+                        primary: '#22c55e', // Vibrant green
+                        secondary: '#16a34a',
+                        surface: '#1E1E1E',   // Card background matching design
+                        surfaceHover: '#2A2A2A',
+                        background: '#121212', // Body dark background
+                        textPrimary: '#ffffff',
+                        textSecondary: '#a3a3a3', // gray-400
+                        borderDark: '#2a2a2a',
+                        highlight: '#2a2a2a'
                     }
                 }
             }
         }
     </script>
-    
+
     <!-- Custom Styles -->
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: radial-gradient(circle at 10% 20%, rgba(34, 197, 94, 0.05), transparent 50%),
+                radial-gradient(circle at 90% 80%, rgba(34, 197, 94, 0.04), transparent 50%);
+            background-color: #121212;
+            background-attachment: fixed;
+        }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans min-h-screen flex flex-col">
+
+<body class="text-textPrimary font-sans min-h-screen flex flex-col">
 
     <!-- Header Navigation -->
-    <header class="bg-white shadow-md sticky top-0 z-10 p-4">
-        <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-            <h1 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
-                Learn Marathi
-            </h1>
-            <div class="flex items-center gap-3 bg-gray-50 px-3 py-1.5 rounded-xl border border-gray-100">
-                <label for="global-level" class="text-xs font-bold uppercase text-gray-400 tracking-wider">Level:</label>
-                <select id="global-level" class="bg-transparent text-primary font-semibold text-sm focus:outline-none cursor-pointer">
-                    <option value="1">Level 1</option>
-                    <option value="2">Level 2</option>
-                    <option value="3">Level 3</option>
-                    <option value="4">Level 4</option>
-                    <option value="5">Level 5</option>
-                    <option value="6">Level 6</option>
-                    <option value="7">Level 7</option>
-                    <option value="8">Level 8</option>
-                    <option value="9">Level 9</option>
-                    <option value="10">Level 10</option>
-                    <option value="11">Level 11</option>
-                </select>
+    <header class="sticky top-0 z-50 px-6 py-4 bg-background/90 backdrop-blur border-b border-borderDark">
+        <div class="max-w-[1400px] mx-auto flex justify-between items-center">
+
+            <div class="flex items-center gap-2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="text-primary flex-shrink-0">
+                    <path d="M12 22C12 22 12 16 16 12C20 8 22 4 22 4C22 4 18 4 14 8C10 12 12 22 12 22Z"
+                        fill="currentColor" />
+                    <path d="M12 22C12 22 12 16 8 12C4 8 2 4 2 4C2 4 6 4 10 8C14 12 12 22 12 22Z" fill="currentColor" />
+                </svg>
+                <h1 class="text-xl font-semibold tracking-wide text-white">
+                    ChatPat
+                </h1>
             </div>
-            <nav class="flex gap-4">
-                <button id="nav-dictionary" class="nav-btn active text-primary font-semibold border-b-2 border-primary pb-1 transition">Dictionary</button>
-                <button id="nav-sentence" class="nav-btn text-gray-500 hover:text-primary font-semibold transition pb-1">Sentence Builder</button>
-                <button id="nav-profile" class="nav-btn text-gray-500 hover:text-primary font-semibold transition pb-1">Profile</button>
+
+            <nav class="hidden md:flex gap-8">
+                <button id="nav-dictionary"
+                    class="nav-btn active text-white font-medium hover:text-primary transition">Vocabulary</button>
+                <button id="nav-sentence"
+                    class="nav-btn text-textSecondary font-medium hover:text-white transition">Sentence Builder</button>
+                <button id="nav-profile"
+                    class="nav-btn text-textSecondary font-medium hover:text-white transition">Profile</button>
             </nav>
+
+            <div class="flex items-center gap-4">
+                <button class="text-textPrimary hover:text-primary transition" title="Toggle Profile Modal"
+                    id="header-profile-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="flex-shrink-0"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M20 21V19C20 17.8954 19.1046 17 18 17H6C4.89543 17 4 17.8954 4 19V21"
+                            stroke-linecap="round" />
+                        <circle cx="12" cy="7" r="4" stroke-linecap="round" />
+                    </svg>
+                </button>
+            </div>
         </div>
     </header>
 
     <!-- Main Content Area -->
-    <main class="flex-grow flex justify-center p-4">
-        
-        <!-- View 1: Dictionary -->
-        <section id="dictionary-view" class="view-section w-full max-w-4xl active-view">
-            <div class="mb-6 flex flex-col md:flex-row gap-4 justify-between items-center">
-                <h2 class="text-3xl font-semibold text-dark">Vocabulary</h2>
-                <div class="relative w-full md:w-auto">
-                    <input type="text" id="searchInput" placeholder="Search English word..." 
-                           class="w-full md:w-64 px-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary shadow-sm transition">
-                </div>
-            </div>
+    <main class="flex-grow flex w-full max-w-[1400px] mx-auto p-4 md:p-8">
 
-            <!-- Category Filters -->
-            <div class="mb-8 flex flex-wrap gap-2" id="category-filters">
-                <button class="cat-btn active px-4 py-1.5 rounded-full text-sm font-medium bg-primary text-white shadow-sm transition" data-cat="All">All</button>
-                <button class="cat-btn px-4 py-1.5 rounded-full text-sm font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition" data-cat="Noun">Noun</button>
-                <button class="cat-btn px-4 py-1.5 rounded-full text-sm font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition" data-cat="Verb">Verb</button>
-                <button class="cat-btn px-4 py-1.5 rounded-full text-sm font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition" data-cat="Adjective">Adjective</button>
-                <button class="cat-btn px-4 py-1.5 rounded-full text-sm font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition" data-cat="Adverb">Adverb</button>
-                <button class="cat-btn px-4 py-1.5 rounded-full text-sm font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition" data-cat="Pronoun">Pronoun</button>
-                <button class="cat-btn px-4 py-1.5 rounded-full text-sm font-medium bg-gray-200 text-gray-700 hover:bg-gray-300 transition" data-cat="Misc">Misc</button>
-            </div>
-            <div id="dictionary-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Dictionary items will be injected here -->
-                <div class="text-center text-gray-500 col-span-full py-10">Loading words...</div>
+        <!-- View 1: Dictionary (Catalog layout) -->
+        <section id="dictionary-view" class="view-section w-full active-view relative">
+            <div class="flex flex-col lg:flex-row gap-10">
+
+                <!-- Sidebar Filters -->
+                <aside class="w-full lg:w-64 flex-shrink-0 flex flex-col gap-8">
+                    <div class="flex items-center gap-2 text-white text-lg font-medium">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="text-textSecondary"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M4 6H20M9 12H15M10 18H14" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        Filters
+                    </div>
+
+                    <!-- Search -->
+                    <div class="relative">
+                        <svg class="absolute left-3 top-2.5 w-4 h-4 text-textSecondary" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="M21 21L16.65 16.65" stroke-linecap="round"></path>
+                        </svg>
+                        <input type="text" id="searchInput" placeholder="Search..."
+                            class="w-full bg-surface text-white px-9 py-2.5 rounded-md border border-borderDark focus:border-borderDark focus:ring-1 focus:ring-primary focus:outline-none transition placeholder-textSecondary text-sm">
+                    </div>
+
+                    <!-- Categories -->
+                    <div>
+                        <h3 class="text-[11px] font-bold uppercase text-textSecondary tracking-widest mb-4">Categories
+                        </h3>
+                        <div class="flex flex-col gap-1" id="category-filters">
+                            <button
+                                class="cat-btn active w-full flex justify-between items-center px-3 py-2 text-sm text-white font-medium border-l-[3px] border-primary bg-surface/80 hover:bg-surface transition"
+                                data-cat="All">
+                                <span>All Words</span>
+                            </button>
+                            <button
+                                class="cat-btn w-full flex justify-between items-center px-3 py-2 text-sm text-textSecondary font-medium border-l-[3px] border-transparent hover:text-white hover:bg-surface/40 transition"
+                                data-cat="Noun">
+                                <span>Noun</span>
+                            </button>
+                            <button
+                                class="cat-btn w-full flex justify-between items-center px-3 py-2 text-sm text-textSecondary font-medium border-l-[3px] border-transparent hover:text-white hover:bg-surface/40 transition"
+                                data-cat="Verb">
+                                <span>Verb</span>
+                            </button>
+                            <button
+                                class="cat-btn w-full flex justify-between items-center px-3 py-2 text-sm text-textSecondary font-medium border-l-[3px] border-transparent hover:text-white hover:bg-surface/40 transition"
+                                data-cat="Adjective">
+                                <span>Adjective</span>
+                            </button>
+                            <button
+                                class="cat-btn w-full flex justify-between items-center px-3 py-2 text-sm text-textSecondary font-medium border-l-[3px] border-transparent hover:text-white hover:bg-surface/40 transition"
+                                data-cat="Adverb">
+                                <span>Adverb</span>
+                            </button>
+                            <button
+                                class="cat-btn w-full flex justify-between items-center px-3 py-2 text-sm text-textSecondary font-medium border-l-[3px] border-transparent hover:text-white hover:bg-surface/40 transition"
+                                data-cat="Pronoun">
+                                <span>Pronoun</span>
+                            </button>
+                            <button
+                                class="cat-btn w-full flex justify-between items-center px-3 py-2 text-sm text-textSecondary font-medium border-l-[3px] border-transparent hover:text-white hover:bg-surface/40 transition"
+                                data-cat="Misc">
+                                <span>Misc</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Level Selector -->
+                    <div>
+                        <h3 class="text-[11px] font-bold uppercase text-textSecondary tracking-widest mb-4">Difficulty
+                            Level</h3>
+                        <div class="relative">
+                            <select id="global-level"
+                                class="w-full bg-surface text-white text-sm border border-borderDark rounded-md px-3 py-2.5 focus:outline-none focus:border-borderDark appearance-none cursor-pointer">
+                                <option value="All">All Levels</option>
+                                <option value="1">Level 1 - Beginner</option>
+                                <option value="2">Level 2</option>
+                                <option value="3">Level 3</option>
+                                <option value="4">Level 4</option>
+                                <option value="5">Level 5</option>
+                                <option value="6">Level 6</option>
+                                <option value="7">Level 7</option>
+                                <option value="8">Level 8</option>
+                                <option value="9">Level 9</option>
+                                <option value="10">Level 10</option>
+                                <option value="11">Level 11 - Master</option>
+                            </select>
+                            <div
+                                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-textSecondary">
+                                <svg class="fill-current h-4 w-4" viewBox="0 0 20 20">
+                                    <path
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </aside>
+
+                <!-- Main Grid Area -->
+                <div class="flex-grow">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
+                        <h2 class="text-3xl font-semibold tracking-tight text-white mb-2 sm:mb-0">Vocabulary List</h2>
+                        <div class="flex flex-wrap gap-4 text-xs text-textSecondary items-center">
+                            <span class="cursor-pointer hover:text-white transition">Default Sorting ↓</span>
+                            <span class="text-borderDark hidden sm:inline">|</span>
+                            <span class="cursor-pointer hover:text-white transition">Categories ↓</span>
+                        </div>
+                    </div>
+
+                    <div id="dictionary-grid" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+                        <div class="text-center text-textSecondary col-span-full py-10">Loading words...</div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- View 2: Sentence Builder -->
-        <section id="sentence-view" class="view-section w-full max-w-4xl hidden">
-            <h2 class="text-3xl font-semibold text-dark mb-2 text-center">Construct the Sentence</h2>
-            <p class="text-center text-gray-500 mb-8">Click the Marathi words in the correct order to match the English sentence.</p>
+        <section id="sentence-view" class="view-section w-full hidden">
+            <div class="max-w-4xl mx-auto w-full">
+                <h2 class="text-3xl font-semibold text-white mb-2 tracking-tight">Practice Arena</h2>
+                <p class="text-textSecondary mb-8 text-sm">Select Marathi words below to construct the target phrase.
+                </p>
 
-            <div class="bg-white rounded-2xl shadow-lg p-6 lg:p-10">
-                <!-- Score & controls -->
-                <div class="flex justify-between items-center mb-6">
-                    <div class="text-lg font-medium text-gray-600">Score: <span id="score-display" class="text-primary font-bold">0</span></div>
-                    <div class="flex flex-wrap gap-2 items-center justify-end">
-                        <span id="model-status" class="text-xs text-blue-500 font-medium hidden">Loading model...</span>
-                        
-                        <!-- Volume Bar -->
-                        <div id="volume-container" class="hidden flex-1 h-3 bg-gray-200 rounded-full overflow-hidden min-w-[60px] max-w-[120px] transition-all">
-                            <div id="volume-bar" class="h-full bg-green-500 w-0 transition-all duration-75"></div>
-                        </div>
-                        <!-- Controls -->
-                        <button id="hint-btn" class="text-sm px-3 py-1 bg-yellow-100 text-yellow-700 rounded-lg hover:bg-yellow-200 transition">Hint</button>
-                        <button id="shuffle-btn" class="text-sm px-3 py-1 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition">Shuffle</button>
-                        <button id="speak-btn" class="text-sm px-3 py-1 bg-green-100 text-green-700 rounded-lg hover:bg-green-200 transition flex items-center gap-1">
-                            🎤 Speak
-                        </button>
+                <div
+                    class="bg-surface rounded-xl border border-borderDark p-6 lg:p-10 shadow-2xl relative overflow-hidden">
+
+                    <!-- Decorative subtle glow in corner -->
+                    <div
+                        class="absolute -top-20 -right-20 w-40 h-40 bg-primary/10 rounded-full blur-[80px] pointer-events-none">
                     </div>
-                </div>
 
-                <!-- Target English Sentence -->
-                <div class="bg-gradient-to-r from-blue-50 relative to-indigo-50 border border-blue-100 rounded-xl p-6 mb-8 text-center">
-                    <span class="text-xs font-bold uppercase text-blue-400 absolute top-2 left-4">Translate this</span>
-                    <button id="listen-btn" class="absolute top-2 right-4 text-xs font-bold bg-indigo-100 text-indigo-700 px-2 py-1 rounded hover:bg-indigo-200 transition" title="Listen to Marathi Pronunciation">
-                        🔈 Listen
-                    </button>
-                    <h3 id="target-sentence" class="text-2xl font-bold text-dark mt-2">Loading sentence...</h3>
-                </div>
+                    <!-- Score & Controls -->
+                    <div class="flex justify-between items-center mb-6 relative z-10">
+                        <div class="text-sm font-medium text-textSecondary">Accuracy Score: <span id="score-display"
+                                class="text-primary font-bold text-lg">0</span></div>
+                        <div class="flex flex-wrap gap-2 items-center justify-end">
+                            <span id="model-status" class="text-xs text-primary font-medium hidden">Loading
+                                model...</span>
 
-                <!-- Selected Words Area (User's answer) -->
-                <div id="selected-words-area" class="min-h-[80px] border-2 border-dashed border-gray-300 rounded-xl p-4 flex flex-wrap gap-3 items-center justify-center mb-8 bg-gray-50 transition-colors">
-                    <span class="text-gray-400 italic">Select words from below...</span>
-                </div>
+                            <div id="volume-container"
+                                class="hidden flex-1 h-2 bg-background border border-borderDark rounded-full overflow-hidden min-w-[60px] max-w-[100px]">
+                                <div id="volume-bar" class="h-full bg-primary w-0 transition-all duration-75"></div>
+                            </div>
 
-                <!-- Word Options Area -->
-                <div id="word-options-area" class="flex flex-wrap gap-3 justify-center mb-8">
-                    <!-- Word option buttons will be injected here -->
-                </div>
+                            <button id="hint-btn"
+                                class="text-xs px-3 py-1.5 bg-highlight text-textPrimary hover:bg-borderDark border border-borderDark rounded-md transition font-medium">Hint</button>
+                            <button id="shuffle-btn"
+                                class="text-xs px-3 py-1.5 bg-highlight text-textPrimary hover:bg-borderDark border border-borderDark rounded-md transition font-medium">Shuffle</button>
+                            <button id="speak-btn"
+                                class="text-xs px-3 py-1.5 bg-primary/20 text-primary border border-primary/30 rounded-md transition font-medium flex items-center gap-1 hover:bg-primary/30">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M12 2v10M8.5 6L12 2l3.5 4M12 22a8 8 0 0 0 8-8H4a8 8 0 0 0 8 8z" />
+                                </svg>
+                                Speak
+                            </button>
+                        </div>
+                    </div>
 
-                <!-- Feedback Area & Next btn -->
-                <div class="flex flex-col items-center gap-4">
-                    <div id="feedback-message" class="text-lg font-semibold h-6 text-center"></div>
-                    <div class="flex gap-4">
-                        <button id="check-btn" class="hidden px-6 py-2 bg-primary text-white font-semibold rounded-lg shadow hover:bg-indigo-700 transition transform hover:scale-105">Check Answer</button>
-                        <button id="next-btn" class="hidden px-6 py-2 bg-secondary text-white font-semibold rounded-lg shadow hover:bg-pink-600 transition transform hover:scale-105">Next Sentence</button>
-                        <button id="retry-btn" class="hidden px-6 py-2 bg-gray-500 text-white font-semibold rounded-lg shadow hover:bg-gray-600 transition">Clear Options</button>
+                    <!-- Target Sentence -->
+                    <div
+                        class="bg-background flex flex-col justify-center relative border border-borderDark rounded-xl p-8 mb-8 text-center shadow-inner min-h-[140px]">
+                        <span
+                            class="text-[10px] font-bold uppercase text-textSecondary tracking-widest absolute top-4 left-6">Translate
+                            to English</span>
+                        <button id="listen-btn"
+                            class="absolute top-4 right-6 text-xs font-semibold bg-surface border border-borderDark text-textPrimary hover:text-white px-3 py-1.5 rounded-md hover:bg-highlight transition flex items-center gap-2"
+                            title="Listen">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                            </svg>
+                        </button>
+                        <h3 id="target-sentence" class="text-2xl lg:text-3xl font-medium text-white tracking-wide">
+                            Loading...</h3>
+                    </div>
+
+                    <!-- Selected Words Area -->
+                    <div id="selected-words-area"
+                        class="min-h-[90px] border border-dashed border-borderDark rounded-xl p-4 flex flex-wrap gap-3 items-center justify-center mb-8 bg-[#151515] transition-all">
+                        <span class="text-textSecondary text-sm italic">Drop words here...</span>
+                    </div>
+
+                    <!-- Word Options Area -->
+                    <div id="word-options-area" class="flex flex-wrap gap-3 justify-center mb-10">
+                        <!-- Word buttons injected here -->
+                    </div>
+
+                    <!-- Feedback & Next btn -->
+                    <div class="flex flex-col items-center gap-4 relative z-10">
+                        <div id="feedback-message" class="text-sm lg:text-base font-medium h-6 text-center"></div>
+                        <div class="flex gap-4">
+                            <button id="check-btn"
+                                class="hidden px-8 py-2.5 bg-primary text-[#121212] font-semibold rounded-md shadow-lg shadow-primary/20 hover:bg-green-400 transition transform hover:-translate-y-0.5">Submit
+                                Answer</button>
+                            <button id="next-btn"
+                                class="hidden px-8 py-2.5 bg-primary text-[#121212] font-semibold rounded-md shadow-lg shadow-primary/20 hover:bg-green-400 transition transform hover:-translate-y-0.5">Continue</button>
+                            <button id="retry-btn"
+                                class="hidden px-6 py-2.5 bg-highlight border border-borderDark text-textPrimary font-medium rounded-md hover:bg-borderDark transition">Reset
+                                Area</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- View 3: Profile -->
-        <section id="profile-view" class="view-section w-full max-w-4xl hidden">
-            <div class="flex flex-col sm:flex-row justify-between items-center mb-6">
-                <h2 class="text-3xl font-semibold text-dark">Learner Profile</h2>
-                <div class="flex items-center gap-2 mt-4 sm:mt-0">
-                     <select id="profile-selector" class="px-3 py-1.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-gray-700 bg-white font-medium cursor-pointer shadow-sm"></select>
-                     <button id="new-profile-btn" class="px-4 py-1.5 bg-primary text-white rounded-lg text-sm font-semibold shadow hover:bg-indigo-700 transition">+ New</button>
+        <section id="profile-view" class="view-section w-full hidden">
+            <div class="max-w-5xl mx-auto w-full">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8">
+                    <div>
+                        <h2 class="text-3xl font-semibold text-white tracking-tight">Your Progress</h2>
+                        <p class="text-sm text-textSecondary mt-1">Track your learning journey.</p>
+                    </div>
+                    <div class="flex items-center gap-3 mt-4 sm:mt-0">
+                        <select id="profile-selector"
+                            class="px-4 py-2 bg-surface border border-borderDark rounded-md focus:outline-none focus:border-borderDark text-textPrimary text-sm font-medium cursor-pointer shadow-sm appearance-none pr-8 relative"></select>
+                        <button id="new-profile-btn"
+                            class="px-4 py-2 bg-primary text-[#121212] rounded-md text-sm font-semibold shadow hover:bg-green-400 transition">Add
+                            Profile</button>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
-                <!-- Streak Card -->
-                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 flex flex-col items-center justify-center text-center">
-                    <div class="text-gray-400 text-[11px] font-semibold uppercase tracking-wider mb-2">Current Streak</div>
-                    <div class="text-3xl font-bold text-orange-500"><span id="stat-streak">0</span></div>
-                </div>
-                <!-- Active Days Card -->
-                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 flex flex-col items-center justify-center text-center">
-                    <div class="text-gray-400 text-[11px] font-semibold uppercase tracking-wider mb-2">Total Active</div>
-                    <div class="text-3xl font-bold text-blue-500"><span id="stat-active">0</span></div>
-                </div>
-                <!-- Mastered Card -->
-                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 flex flex-col items-center justify-center text-center">
-                    <div class="text-gray-400 text-[11px] font-semibold uppercase tracking-wider mb-2">Mastered</div>
-                    <div class="text-2xl font-bold text-green-500" id="stat-mastered">0 / 0</div>
-                </div>
-                <!-- Total Attempts Card -->
-                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 flex flex-col items-center justify-center text-center">
-                    <div class="text-gray-400 text-[11px] font-semibold uppercase tracking-wider mb-2">Attempts</div>
-                    <div class="text-3xl font-bold text-purple-500" id="stat-attempts">0</div>
-                </div>
-                <!-- Accuracy Card -->
-                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 flex flex-col items-center justify-center text-center">
-                    <div class="text-gray-400 text-[11px] font-semibold uppercase tracking-wider mb-2">Accuracy</div>
-                    <div class="text-3xl font-bold text-rose-500" id="stat-accuracy">0%</div>
-                </div>
-            </div>
 
-            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 lg:p-8">
-                <h3 class="text-xl font-bold text-gray-800 mb-4 border-b pb-2">Mastered Library</h3>
-                <div id="mastered-sentences-list" class="max-h-96 overflow-y-auto pr-2">
-                    <!-- Mastered items will inject here -->
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
+                    <!-- Stat Cards -->
+                    <div
+                        class="bg-surface rounded-xl border border-borderDark p-5 flex flex-col items-center justify-center text-center shadow-lg">
+                        <div class="text-textSecondary text-[10px] font-bold uppercase tracking-widest mb-3">Streak
+                        </div>
+                        <div class="text-3xl font-semibold text-white"><span id="stat-streak">0</span><span
+                                class="text-orange-500 text-lg ml-1">🔥</span></div>
+                    </div>
+                    <div
+                        class="bg-surface rounded-xl border border-borderDark p-5 flex flex-col items-center justify-center text-center shadow-lg">
+                        <div class="text-textSecondary text-[10px] font-bold uppercase tracking-widest mb-3">Days</div>
+                        <div class="text-3xl font-semibold text-white"><span id="stat-active">0</span><span
+                                class="text-blue-400 text-lg ml-1">☀️</span></div>
+                    </div>
+                    <div
+                        class="bg-surface rounded-xl border border-borderDark p-5 flex flex-col items-center justify-center text-center shadow-lg">
+                        <div class="text-textSecondary text-[10px] font-bold uppercase tracking-widest mb-3">Mastered
+                        </div>
+                        <div class="text-2xl font-semibold text-primary" id="stat-mastered">0 / 0</div>
+                    </div>
+                    <div
+                        class="bg-surface rounded-xl border border-borderDark p-5 flex flex-col items-center justify-center text-center shadow-lg">
+                        <div class="text-textSecondary text-[10px] font-bold uppercase tracking-widest mb-3">Attempts
+                        </div>
+                        <div class="text-3xl font-semibold text-white" id="stat-attempts">0</div>
+                    </div>
+                    <div
+                        class="bg-surface rounded-xl border border-borderDark p-5 flex flex-col items-center justify-center text-center shadow-lg">
+                        <div class="text-textSecondary text-[10px] font-bold uppercase tracking-widest mb-3">Accuracy
+                        </div>
+                        <div class="text-3xl font-semibold text-white" id="stat-accuracy">0%</div>
+                    </div>
+                </div>
+
+                <div class="bg-surface rounded-xl border border-borderDark p-6 lg:p-8 shadow-lg">
+                    <h3
+                        class="text-lg font-medium text-white mb-6 border-b border-borderDark pb-4 flex items-center gap-2">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-primary"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                        Mastery Library
+                    </h3>
+                    <div id="mastered-sentences-list" class="max-h-96 overflow-y-auto pr-2 space-y-2">
+                        <!-- Mastered items will inject here -->
+                    </div>
                 </div>
             </div>
         </section>
@@ -198,18 +372,25 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-dark text-gray-400 text-center py-6 mt-12">
-        <p>© 2026 Language Learning App. Built with vanilla JS.</p>
+    <footer class="border-t border-borderDark text-textSecondary text-xs text-center py-6 mt-12 bg-background/50">
+        <p>© 2026 LanguageAura. Minimalist dark aesthetic.</p>
     </footer>
 
     <!-- New Profile Modal -->
-    <div id="new-profile-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
-        <div class="bg-white rounded-xl shadow-lg p-6 w-full max-w-sm">
-            <h3 class="text-xl font-bold mb-4">New Profile</h3>
-            <input type="text" id="new-profile-name" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary mb-4" placeholder="Enter name...">
-            <div class="flex justify-end gap-2">
-                <button id="cancel-profile-btn" class="px-4 py-2 text-gray-600 hover:bg-gray-100 rounded transition">Cancel</button>
-                <button id="save-profile-btn" class="px-4 py-2 bg-primary text-white rounded transition hover:bg-indigo-700">Save</button>
+    <div id="new-profile-modal"
+        class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center">
+        <div
+            class="bg-surface border border-borderDark rounded-xl shadow-2xl p-6 w-full max-w-sm transform transition-all">
+            <h3 class="text-xl font-medium text-white mb-6">Create Profile</h3>
+            <input type="text" id="new-profile-name"
+                class="w-full px-4 py-2.5 bg-background border border-borderDark text-white placeholder-textSecondary rounded-md focus:outline-none focus:border-borderDark mb-6 transition"
+                placeholder="Enter your name...">
+            <div class="flex justify-end gap-3">
+                <button id="cancel-profile-btn"
+                    class="px-5 py-2 text-textSecondary hover:text-white border border-transparent hover:border-borderDark hover:bg-highlight rounded-md transition font-medium">Cancel</button>
+                <button id="save-profile-btn"
+                    class="px-5 py-2 bg-primary text-[#121212] rounded-md transition hover:bg-green-400 font-semibold shadow-lg shadow-primary/20">Save
+                    Profile</button>
             </div>
         </div>
     </div>
@@ -221,4 +402,5 @@
     <script src="js/sentenceGame.js"></script>
     <script src="js/app.js"></script>
 </body>
+
 </html>

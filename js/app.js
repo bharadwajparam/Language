@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', async () => {
     // Global State
-    window.appState = { currentLevel: 1 };
+    window.appState = { currentLevel: 'All' };
 
     // 1. Navigation Logic
     const navDict = document.getElementById('nav-dictionary');
@@ -58,7 +58,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Global Level Selector Binding
     const levelSelector = document.getElementById('global-level');
     levelSelector.addEventListener('change', (e) => {
-        window.appState.currentLevel = parseInt(e.target.value);
+        const val = e.target.value;
+        window.appState.currentLevel = val === 'All' ? 'All' : parseInt(val);
         window.Dictionary.filterWords();
         window.SentenceGame.loadNextSentence();
     });

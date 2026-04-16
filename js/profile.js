@@ -207,17 +207,17 @@ const Profile = {
         if (masteredList && pool && pool.length > 0) {
             masteredList.innerHTML = '';
             if (this.data.masteredSentences.length === 0) {
-                masteredList.innerHTML = '<p class="text-gray-500 italic p-4 text-center">No sentences mastered yet. Start building!</p>';
+                masteredList.innerHTML = '<p class="text-textSecondary italic p-8 text-center bg-background/50 border border-borderDark border-dashed rounded-xl">No sentences mastered yet. Keep practicing!</p>';
             } else {
                 this.data.masteredSentences.forEach(id => {
                     const mappedSentence = pool.find(s => s.id === id);
                     if (mappedSentence) {
                         const li = document.createElement('div');
-                        li.className = 'p-4 bg-gray-50 border border-gray-100 rounded-lg flex flex-col mb-2';
+                        li.className = 'p-4 bg-background/50 border border-borderDark hover:bg-surfaceHover transition rounded-lg flex flex-col mb-2 shadow-sm';
                         li.innerHTML = `
-                            <span class="font-bold text-gray-800">${mappedSentence.english}</span>
-                            <span class="text-primary mt-1 text-lg">${mappedSentence.marathi.map(m => m.script).join(' ')}</span>
-                            <span class="text-gray-500 text-sm capitalize">${mappedSentence.marathi.map(m => m.transliteration).join(' ')}</span>
+                            <span class="font-medium text-white mb-1">${mappedSentence.english}</span>
+                            <span class="text-primary text-xl">${mappedSentence.marathi.map(m => m.script).join(' ')}</span>
+                            <span class="text-textSecondary text-[10px] uppercase tracking-widest mt-1">${mappedSentence.marathi.map(m => m.transliteration).join(' ')}</span>
                         `;
                         masteredList.appendChild(li);
                     }

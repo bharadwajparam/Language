@@ -88,11 +88,16 @@ const SentenceGame = {
     loadNextSentence() {
         if (!this.allSentences || this.allSentences.length === 0) return;
         
-        let pool = this.allSentences.filter(s => s.level === window.appState.currentLevel);
-        if (pool.length === 0) {
-            pool = this.allSentences.filter(s => s.level <= window.appState.currentLevel);
+        let pool;
+        if (window.appState.currentLevel === 'All') {
+            pool = this.allSentences;
+        } else {
+            pool = this.allSentences.filter(s => s.level === window.appState.currentLevel);
+            if (pool.length === 0) {
+                pool = this.allSentences.filter(s => s.level <= window.appState.currentLevel);
+            }
         }
-        if (pool.length === 0) pool = this.allSentences; // Absolute fallback
+        if (!pool || pool.length === 0) pool = this.allSentences; // Absolute fallback
         
         // Pick random sentence
         const randomIndex = Math.floor(Math.random() * pool.length);
@@ -105,8 +110,8 @@ const SentenceGame = {
         document.getElementById('feedback-message').className = 'text-lg font-semibold h-6 text-center';
         
         const selectedArea = document.getElementById('selected-words-area');
-        selectedArea.innerHTML = '<span class="text-gray-400 italic">Select words from below...</span>';
-        selectedArea.className = 'min-h-[80px] border-2 border-dashed border-gray-300 rounded-xl p-4 flex flex-wrap gap-3 items-center justify-center mb-8 bg-gray-50 transition-colors';
+        selectedArea.innerHTML = '<span class="text-textSecondary text-sm italic">Drop words here...</span>';
+        selectedArea.className = 'min-h-[90px] border border-dashed border-borderDark rounded-xl p-4 flex flex-wrap gap-3 items-center justify-center mb-8 bg-[#151515] transition-all';
         
         // Hide/Show Buttons
         document.getElementById('check-btn').classList.add('hidden');
@@ -126,8 +131,8 @@ const SentenceGame = {
         
         words.forEach((wordObj, index) => {
             const btn = document.createElement('button');
-            btn.className = 'word-option px-4 py-2 bg-white border-2 border-gray-200 rounded-xl shadow-sm font-medium text-dark hover:border-primary hover:text-primary focus:outline-none flex flex-col items-center leading-tight';
-            btn.innerHTML = `<span class="text-lg">${wordObj.script}</span><span class="text-xs text-gray-400 capitalize">${wordObj.transliteration}</span>`;
+            btn.className = 'word-option px-4 py-2 bg-highlight border border-borderDark rounded-md shadow-sm font-medium text-textPrimary hover:border-primary hover:text-primary focus:outline-none flex flex-col items-center leading-tight transition';
+            btn.innerHTML = `<span class="text-lg">${wordObj.script}</span><span class="text-xs text-textSecondary capitalize">${wordObj.transliteration}</span>`;
             btn.dataset.word = wordObj.script;
             btn.dataset.id = `opt-${index}`;
             btn.dataset.translit = wordObj.transliteration;
@@ -168,14 +173,14 @@ const SentenceGame = {
         container.innerHTML = '';
         
         if (this.selectedWords.length === 0) {
-            container.innerHTML = '<span class="text-gray-400 italic">Select words from below...</span>';
+            container.innerHTML = '<span class="text-textSecondary text-sm italic">Drop words here...</span>';
             return;
         }
 
         this.selectedWords.forEach(wordItem => {
             const badge = document.createElement('div');
-            badge.className = 'selected-word px-4 py-2 bg-primary text-white rounded-xl shadow-sm font-medium border-2 border-transparent flex flex-col items-center leading-tight';
-            badge.innerHTML = `<span>${wordItem.word}</span><span class="text-[10px] opacity-80 capitalize">${wordItem.translit}</span>`;
+            badge.className = 'selected-word px-4 py-2 bg-primary text-[#121212] rounded-md shadow-lg shadow-primary/20 font-medium flex flex-col items-center leading-tight';
+            badge.innerHTML = `<span class="font-bold">${wordItem.word}</span><span class="text-[10px] opacity-80 capitalize text-black font-semibold">${wordItem.translit}</span>`;
             badge.addEventListener('click', () => this.deselectWord(wordItem));
             container.appendChild(badge);
         });
@@ -192,7 +197,7 @@ const SentenceGame = {
         document.getElementById('feedback-message').textContent = '';
         
         const selectedArea = document.getElementById('selected-words-area');
-        selectedArea.className = 'min-h-[80px] border-2 border-dashed border-gray-300 rounded-xl p-4 flex flex-wrap gap-3 items-center justify-center mb-8 bg-gray-50 transition-colors';
+        selectedArea.className = 'min-h-[90px] border border-dashed border-borderDark rounded-xl p-4 flex flex-wrap gap-3 items-center justify-center mb-8 bg-[#151515] transition-all';
     },
 
     checkAnswer() {
@@ -207,9 +212,9 @@ const SentenceGame = {
                 window.Profile.recordAttempt(true);
             }
             feedback.textContent = 'Awesome! Correct Answer. 🎉';
-            feedback.className = 'text-lg font-semibold h-6 text-center text-green-600';
-            selectedArea.classList.remove('border-gray-300', 'bg-gray-50');
-            selectedArea.classList.add('border-green-400', 'bg-green-50');
+            feedback.className = 'text-sm lg:text-base font-medium h-6 text-center text-primary';
+            selectedArea.classList.remove('border-borderDark', 'bg-[#151515]', 'border-dashed');
+            selectedArea.classList.add('border-primary', 'bg-primary/10', 'border-solid');
             
             if (window.Profile && this.currentSentence.id) {
                 window.Profile.recordMastery(this.currentSentence.id);
@@ -226,7 +231,7 @@ const SentenceGame = {
                 window.Profile.recordAttempt(false);
             }
             feedback.textContent = 'Oops! Try again. ❌';
-            feedback.className = 'text-lg font-semibold h-6 text-center text-red-500';
+            feedback.className = 'text-sm lg:text-base font-medium h-6 text-center text-rose-500';
             selectedArea.classList.add('shake');
             setTimeout(() => selectedArea.classList.remove('shake'), 500);
         }
@@ -382,9 +387,10 @@ const SentenceGame = {
             this.animationFrameId = requestAnimationFrame(updateVolume);
             
             const btn = document.getElementById('speak-btn');
-            btn.innerHTML = '🛑 Stop';
-            btn.classList.replace('bg-green-100', 'bg-red-100');
-            btn.classList.replace('text-green-700', 'text-red-700');
+            btn.innerHTML = '🛑 Stop Recording';
+            btn.classList.replace('bg-primary/20', 'bg-rose-500/20');
+            btn.classList.replace('text-primary', 'text-rose-500');
+            btn.classList.replace('border-primary/30', 'border-rose-500/30');
         } catch (err) {
             console.error('Error accessing microphone:', err);
             alert('Could not access microphone. Please ensure permissions are granted.');
@@ -397,9 +403,10 @@ const SentenceGame = {
             this.isRecording = false;
             
             const btn = document.getElementById('speak-btn');
-            btn.innerHTML = '🎤 Speak';
-            btn.classList.replace('bg-red-100', 'bg-green-100');
-            btn.classList.replace('text-red-700', 'text-green-700');
+            btn.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v10M8.5 6L12 2l3.5 4M12 22a8 8 0 0 0 8-8H4a8 8 0 0 0 8 8z"/></svg> Speak';
+            btn.classList.replace('bg-rose-500/20', 'bg-primary/20');
+            btn.classList.replace('text-rose-500', 'text-primary');
+            btn.classList.replace('border-rose-500/30', 'border-primary/30');
         }
     },
 
