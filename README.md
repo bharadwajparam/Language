@@ -62,4 +62,4 @@ Upon a successful build, the generated artifacts will be located in the `dist` d
 *   **Credentials**: Please note that when packaging for production, you should ensure that sensitive credentials (like `credentials.json`) are managed securely and handled properly during the application's runtime or built into env configurations, depending on how they are referenced in the source code.
 
 ## 📄 License
-This project is licensed under the ISC License.
+This project is licensed under the GNU General Public License v3.0 (GPL-3.0).
