@@ -45,10 +45,21 @@ npm start
 
 ## 📦 Building for Production
 
-To create a distributable Windows executable (NSIS installer), run the following command. The output will be inside the `dist` folder.
+This project uses `electron-builder` to package the application into a standalone executable.
+
+To create a distributable Windows installer (NSIS format), execute the following build script:
 ```bash
 npm run dist
 ```
+
+### Build Artifacts
+Upon a successful build, the generated artifacts will be located in the `dist` directory. You will typically find:
+*   **`LanguageApp Setup <version>.exe`**: The installer executable that users can run to install the application.
+*   **`win-unpacked/`**: A directory containing the unpacked application and its resources, which is useful for testing the final build output without actually running the installer.
+
+### Important Build Notes
+*   **Target Configuration**: The build target is currently configured for Windows NSIS installers in `package.json` under `build.win.target`.
+*   **Credentials**: Please note that when packaging for production, you should ensure that sensitive credentials (like `credentials.json`) are managed securely and handled properly during the application's runtime or built into env configurations, depending on how they are referenced in the source code.
 
 ## 📄 License
 This project is licensed under the ISC License.
