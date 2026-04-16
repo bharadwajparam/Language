@@ -41,7 +41,6 @@ Set up the Language app for distribution to ~100 users with automatic updates, u
 **Action:** Add `electron-updater` to dependencies
 ```json
 "dependencies": {
-  "@google-cloud/text-to-speech": "^6.4.0",
   "electron-updater": "^6.1.1"
 }
 ```

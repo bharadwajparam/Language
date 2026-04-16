@@ -7,7 +7,7 @@ A modern desktop learning application designed to help users master the Marathi 
 *   **Interactive Dictionary**: An expansive, searchable glossary. Filter vocabulary by parts of speech (noun, verb, adjective, etc.) to focus your studying.
 *   **Sentence Builder Game**: Put your vocabulary to the test! Reconstruct Marathi sentences from their English translations by selecting the correct words in order.
 *   **Audio & Speech Integration**: 
-    *   **Listen**: Hear correct native pronunciations generated using the **Google Cloud Text-to-Speech API**.
+    *   **Listen**: Hear correct native pronunciations generated locally using the **Huggingface Xenova MMS** model.
     *   **Speak**: Practice your pronunciation with the built-in speech recognition features powered by **OpenAI Whisper**.
 *   **Multi-User Profiles**: Share the app with family or friends. Switch seamlessly between different user profiles.
 *   **Progress Tracking**: The dashboard keeps track of your individual learner analytics, including your learning streak, total active days, mastered sentences, total attempts, and overall accuracy.
@@ -16,7 +16,7 @@ A modern desktop learning application designed to help users master the Marathi 
 
 *   **Framework**: Electron
 *   **Frontend**: Vanilla JavaScript, HTML5, Tailwind CSS
-*   **Audio Synthesis**: `@google-cloud/text-to-speech`
+*   **Audio Synthesis**: Transformers.js (`@xenova/transformers`) with MMS TTS
 *   **Speech Recognition**: OpenAI Whisper Model integration
 *   **Packaging**: `electron-builder` & `electron-packager`
 
@@ -24,7 +24,6 @@ A modern desktop learning application designed to help users master the Marathi 
 
 ### Prerequisites
 *   Node.js and npm installed on your machine.
-*   A Google Cloud Project with the Text-to-Speech API enabled, and a generated Service Account Key.
 
 ### 1. Clone & Install
 Clone the repository and install the required dependencies:
@@ -34,10 +33,7 @@ cd Language
 npm install
 ```
 
-### 2. Configure Credentials
-Place your Google Cloud service account JSON key file in the root directory of the application and name it `credentials.json`. 
-
-### 3. Run Locally
+### 2. Run Locally
 Start the Electron development server:
 ```bash
 npm start
@@ -59,7 +55,6 @@ Upon a successful build, the generated artifacts will be located in the `dist` d
 
 ### Important Build Notes
 *   **Target Configuration**: The build target is currently configured for Windows NSIS installers in `package.json` under `build.win.target`.
-*   **Credentials**: Please note that when packaging for production, you should ensure that sensitive credentials (like `credentials.json`) are managed securely and handled properly during the application's runtime or built into env configurations, depending on how they are referenced in the source code.
 
 ## 📄 License
 This project is licensed under the GNU General Public License v3.0 (GPL-3.0).
